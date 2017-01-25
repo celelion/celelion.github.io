@@ -1,3 +1,8 @@
+// A local search script with the help of [hexo-generator-search](https://github.com/PaicHyperionDev/hexo-generator-search)
+// Copyright (C) 2015 
+// Joseph Pan <http://github.com/wzpan>
+// Shuhao Mao <http://github.com/maoshuhao>
+// Edited by MOxFIVE <http://github.com/MOxFIVE>
 
 var searchFunc = function(path, search_id, content_id) {
     'use strict';
@@ -51,7 +56,7 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_self'>"+ data_title;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title' target='_blank'>"+ "> " + data_title +"</a>";
                         var content = data.content.trim().replace(/<[^>]+>/g,"");
                         if (first_occur >= 0) {
                             // cut out characters
@@ -71,13 +76,14 @@ var searchFunc = function(path, search_id, content_id) {
                             keywords.forEach(function(keyword){
                                 var regS = new RegExp(keyword, "gi");
                                 match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
-                            })
-                            str += "<p class=\"search-result\">" + match_content +"...</p>" +"</a>";
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
                         }
                     }
-                })
+                });
                 $resultContent.innerHTML = str;
-            })
+            });
         }
-    })
+    });
 }
