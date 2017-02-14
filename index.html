@@ -76,7 +76,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -110,6 +110,13 @@
         <p class="header-subtitle">A sophomore from Xi’an Jiaotong University(XJTU)</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -180,7 +187,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVPA/">MVPA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Me/">Me</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PKU/">PKU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Psychophysics/">Psychophysics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summer-School/">Summer School</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVPA/">MVPA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Me/">Me</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/News/">News</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PKU/">PKU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Psychophysics/">Psychophysics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Publications/">Publications</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summer-School/">Summer School</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
                     </div>
                 </section>
                 
@@ -285,7 +292,7 @@
       
           
               <p>Hello, I’m Jingjie Li, a sophomore from <a href="http://www.xjtu.edu.cn">Xi’an Jiaotong University</a>(XJTU), Majoring in <a href="https://en.wikipedia.org/wiki/Biomedical_engineering">BME(BioMedical Engineering)</a>.</p>
-<p>I’m interested in cognitive neuroscience. I would like to seek for how our brain interpret the sensory signal, particularly the visual perception. Topics including attentional modulation, the expectation effect and the predictive coding in sensory processing.</p>
+<p>I’m interested in cognitive neuroscience. I would like to seek for how our brain interpret the sensory signal, particularly the visual perception. Topics including attentional modulation, the expectation effect and the predictive coding in sensory processing. Using combination of functional imaging, and psychophysical experiments.</p>
           
       
     </div>
@@ -328,11 +335,11 @@
 
 
   
-    <article id="post-nature-image-identification" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-vssabsacc" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/26/nature-image-identification/" class="article-date">
-      <time datetime="2017-01-26T07:47:18.000Z" itemprop="datePublished">2017-01-26</time>
+      <a href="/2017/02/10/vssabsacc/" class="article-date">
+      <time datetime="2017-02-10T11:30:26.000Z" itemprop="datePublished">2017-02-10</time>
 </a>
 
 
@@ -347,7 +354,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/26/nature-image-identification/">Nature image identification and voxels activity modeling using fMRI encoding model</a>
+      <a class="article-title" href="/2017/02/10/vssabsacc/">My abstract was accepted by VSS 2017</a>
     </h1>
   
 
@@ -357,8 +364,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>In may,2016. I tried to repeat a pioneering research published on <em>NATURE</em> (Kay et al., 2008), using a data-driven <em>Voxel-Wise</em> Model (Naselaris et al., 2011), I successfully constructed a liner receptive field model for every voxels using the Gabor wavelet filter according to the encoding theory of the primary visual cortex (Hubel and Wiesel, 1968), without noise ceiling procedures I also got remarkable accuracy in the identification task (about 48.8%, meanwhile the chance level is about 0.8%).</p>
-<p>My code is now open sccess on <a href="https://github.com/celelion/Voxels-activity-modeling-using-fMRI-data">Github  -  Voxels-activity-modeling-using-fMRI-data</a>.<br>
+              <p>Today, My abstracted submitted to the 17th vision science society annual meeting was accepted.</p>
           
       
     </div>
@@ -367,18 +373,18 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Research-Experience/">Research Experience</a>
+    <a class="article-category-link" href="/categories/Publications/">Publications</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/News/">News</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Publications/">Publications</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XJTU/">XJTU</a></li></ul>
     </div>
 
       
         <p class="article-more-link">
-          <a href="/2017/01/26/nature-image-identification/#more">more >></a>
+          <a href="/2017/02/10/vssabsacc/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -400,8 +406,8 @@
     <article id="post-A_summer_in_PKU" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/26/A_summer_in_PKU/" class="article-date">
-      <time datetime="2017-01-26T05:31:28.000Z" itemprop="datePublished">2017-01-26</time>
+      <a href="/2016/08/22/A_summer_in_PKU/" class="article-date">
+      <time datetime="2016-08-22T05:31:28.000Z" itemprop="datePublished">2016-08-22</time>
 </a>
 
 
@@ -416,7 +422,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/26/A_summer_in_PKU/">A summer in PKU, A summer in Fang&#39;s lab</a>
+      <a class="article-title" href="/2016/08/22/A_summer_in_PKU/">A summer in PKU, A summer in Fang&#39;s lab</a>
     </h1>
   
 
@@ -447,7 +453,76 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/01/26/A_summer_in_PKU/#more">more >></a>
+          <a href="/2016/08/22/A_summer_in_PKU/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-nature-image-identification" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/14/nature-image-identification/" class="article-date">
+      <time datetime="2016-06-14T07:47:18.000Z" itemprop="datePublished">2016-06-14</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/14/nature-image-identification/">Nature image identification and voxels activity modeling using fMRI encoding model</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>In may,2016. I tried to repeat a pioneering research published on <em>NATURE</em> (Kay et al., 2008), using a data-driven <em>Voxel-Wise</em> Model (Naselaris et al., 2011), I successfully constructed a liner receptive field model for every voxels using the Gabor wavelet filter according to the encoding theory of the primary visual cortex (Hubel and Wiesel, 1968), without noise ceiling procedures I also got remarkable accuracy in the identification task (about 48.8%, meanwhile the chance level is about 0.8%).</p>
+<p>My code is now open sccess on <a href="https://github.com/celelion/Voxels-activity-modeling-using-fMRI-data">Github  -  Voxels-activity-modeling-using-fMRI-data</a>.<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Research-Experience/">Research Experience</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/06/14/nature-image-identification/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -469,8 +544,8 @@
     <article id="post-visual_image_reconstruction" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/25/visual_image_reconstruction/" class="article-date">
-      <time datetime="2017-01-24T18:19:55.000Z" itemprop="datePublished">2017-01-25</time>
+      <a href="/2016/03/10/visual_image_reconstruction/" class="article-date">
+      <time datetime="2016-03-09T18:19:55.000Z" itemprop="datePublished">2016-03-10</time>
 </a>
 
 
@@ -485,7 +560,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/25/visual_image_reconstruction/">Visual Image Reconstruction using fMRI</a>
+      <a class="article-title" href="/2016/03/10/visual_image_reconstruction/">Visual Image Reconstruction using fMRI</a>
     </h1>
   
 
@@ -516,7 +591,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/01/25/visual_image_reconstruction/#more">more >></a>
+          <a href="/2016/03/10/visual_image_reconstruction/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
@@ -557,6 +632,27 @@
 
 
 
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">

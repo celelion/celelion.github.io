@@ -18,7 +18,7 @@
 <meta name="description" content="In may,2016. I tried to repeat a pioneering research published on NATURE (Kay et al., 2008), using a data-driven Voxel-Wise Model (Naselaris et al., 2011), I successfully constructed a liner receptive">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nature image identification and voxels activity modeling using fMRI encoding model">
-<meta property="og:url" content="http://www.jingjie.site/2017/01/26/nature-image-identification/index.html">
+<meta property="og:url" content="http://www.jingjie.site/2016/06/14/nature-image-identification/index.html">
 <meta property="og:site_name" content="JingjieLi’s Brain">
 <meta property="og:description" content="In may,2016. I tried to repeat a pioneering research published on NATURE (Kay et al., 2008), using a data-driven Voxel-Wise Model (Naselaris et al., 2011), I successfully constructed a liner receptive">
 <meta property="og:image" content="http://i1.piimg.com/4851/704e84210b37d372.png">
@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://p1.bpimg.com/4851/5ea10a33ac4cf3bc.jpg">
 <meta property="og:image" content="http://p1.bqimg.com/4851/7c3e2d670fa3c75c.png">
 <meta property="og:image" content="http://p1.bqimg.com/4851/dfeb524e2f63586f.png">
-<meta property="og:updated_time" content="2017-01-29T17:01:32.000Z">
+<meta property="og:updated_time" content="2017-01-31T13:28:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nature image identification and voxels activity modeling using fMRI encoding model">
 <meta name="twitter:description" content="In may,2016. I tried to repeat a pioneering research published on NATURE (Kay et al., 2008), using a data-driven Voxel-Wise Model (Naselaris et al., 2011), I successfully constructed a liner receptive">
@@ -83,7 +83,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -117,6 +117,13 @@
         <p class="header-subtitle">A sophomore from Xi’an Jiaotong University(XJTU)</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -187,7 +194,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVPA/">MVPA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Me/">Me</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PKU/">PKU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Psychophysics/">Psychophysics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summer-School/">Summer School</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MVPA/">MVPA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Me/">Me</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/News/">News</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PKU/">PKU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Psychophysics/">Psychophysics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Publications/">Publications</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Repetation/">Repetation</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scholar/">Scholar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summer-School/">Summer School</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XJTU/">XJTU</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encoding-model/">encoding model</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fMRI/">fMRI</a></li></ul>
                     </div>
                 </section>
                 
@@ -263,8 +270,8 @@
       <div class="body-wrap"><article id="post-nature-image-identification" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/26/nature-image-identification/" class="article-date">
-      <time datetime="2017-01-26T07:47:18.000Z" itemprop="datePublished">2017-01-26</time>
+      <a href="/2016/06/14/nature-image-identification/" class="article-date">
+      <time datetime="2016-06-14T07:47:18.000Z" itemprop="datePublished">2016-06-14</time>
 </a>
 
 
@@ -336,8 +343,8 @@
 
 <p>Here we use multi-variation liner regression to build up the model. Using the features  which we cauculated before using gabor wavelet pyramid model. </p>
 <p>We use the tronditional square-root error cost function, and using gradient descent with monument to optimize the cost function.</p>
-<p>$$h=h- \varepsilon g$$</p>
-<p>$$g=\left[ \left[ X’(Xh-y) \right]+\alpha g  \right]$$</p>
+<p>$h=h- \varepsilon g$</p>
+<p>$g=\left[ \left[ X’(Xh-y) \right]+\alpha g  \right]$</p>
 <p>To prevent over-fitting, we used early stopping. A randomly selected 20% of the data-set were removed and kept as a stopping set. Iterations proceeded until the squared error on the stopping set nolonger decreased, or until the squared error on the training set no longer decreased. </p>
 <p>I wrote two function to running this regression. inittrain.m and linereg.m</p>
 <p>The <strong>initrain.m</strong> is used to pre-processing the dataset, devided it into training set and stopping set for early stopping, and remove NaN data points.</p>
@@ -389,10 +396,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/08/22/A_summer_in_PKU/">
+                    A summer in PKU, A summer in Fang&#39;s lab
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/26/A_summer_in_PKU/">
-                    A summer in PKU, A summer in Fang&#39;s lab
+                <a href="/2016/03/10/visual_image_reconstruction/">
+                    Visual Image Reconstruction using fMRI
                 </a>
             </div>
         
@@ -460,19 +473,21 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
+            <a href="/2016/08/22/A_summer_in_PKU/" title="Pre: A summer in PKU, A summer in Fang&#39;s lab">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/26/A_summer_in_PKU/" title="Next: A summer in PKU, A summer in Fang&#39;s lab">
+            <a href="/2016/03/10/visual_image_reconstruction/" title="Next: Visual Image Reconstruction using fMRI">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/nature-image-identification/">Nature image identification and voxels activity modeling using fMRI encoding model</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/A_summer_in_PKU/">A summer in PKU, A summer in Fang's lab</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/25/visual_image_reconstruction/">Visual Image Reconstruction using fMRI</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/25/aboutme/">Something About Jingjie</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/10/vssabsacc/">My abstract was accepted by VSS 2017</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/25/aboutme/">Something About Jingjie</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/22/A_summer_in_PKU/">A summer in PKU, A summer in Fang's lab</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/14/nature-image-identification/">Nature image identification and voxels activity modeling using fMRI encoding model</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/10/visual_image_reconstruction/">Visual Image Reconstruction using fMRI</a></li></ul>
 
 
 
@@ -501,6 +516,27 @@
 
 
 
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
 <div class="scroll" id="scroll">
