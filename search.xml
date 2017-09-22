@@ -8,10 +8,10 @@
       <url>http://www.jingjie.site/2017/05/30/gotovss/</url>
       <content type="html"><![CDATA[<p>Few days ago, I attended VSS 2017 conference in St. Pete Beach. And presented my work in poster.</p>
 <a id="more"></a>
-<p><img src="https://ooo.0o0.ooo/2017/06/24/594dd10199ede.jpg" alt="VSS_NameCard"></p>
-<p>Here is my poster presentation.<br><img src="https://ooo.0o0.ooo/2017/06/24/594dd13ca540a.jpg" alt="JL_Poster_Photo"></p>
-<p>And a online-version of my Poster.<br><img src="https://ooo.0o0.ooo/2017/06/24/594dd18523255.jpg" alt="Poster_VSS2017"></p>
-<p>If you are interested about my work. Please contact me directly via jingjie.li@nyu.edu or jingjie.li@stu.edu.cn</p>
+<p><img src="https://i.imgur.com/QxSknVL.jpg" alt="VSS_NameCard"></p>
+<p>Here is my poster presentation.<br><img src="https://i.imgur.com/5gbFKfK.jpg" alt="JL_Poster_Photo"></p>
+<p>And a online-version of my Poster.<br><img src="https://i.imgur.com/sN3a0Ub.jpg" alt="Poster_VSS2017"></p>
+<p>If you are interested about my work. Please contact me directly via jingjie.li@nyu.edu or jingjie.li@stu.xjtu.edu.cn</p>
 ]]></content>
     </entry>
     
@@ -30,20 +30,20 @@
 </ul>
 <h2 id="Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015"><a href="#Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015" class="headerlink" title="Introduction to Programming with MATLAB — 07 2015-09 2015"></a>Introduction to Programming with MATLAB — 07 2015-09 2015</h2><p>After graduate from high school, I participated in this course in the up-coming summer vocation. In order to improve my programming skills with MATLAB. This course benefit me a lot for further study and research.</p>
 <p>Certification</p>
-<p><img src="http://p1.bqimg.com/4851/76f059d2c49e66ca.jpg" alt="MATLAB_coursera_LIJINGJIE"></p>
+<p><img src="https://i.imgur.com/i8prk4v.jpg" alt="MATLAB_coursera_LIJINGJIE"></p>
 <h2 id="Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015"><a href="#Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015" class="headerlink" title="Meachine Learning (By Andrew Ng) — 09 2015-11 2015"></a>Meachine Learning (By Andrew Ng) — 09 2015-11 2015</h2><p>Further, I participated in this course in the first semester of freshman.</p>
 <p>In this course, I got basic understanding about what meachine learning algorithms do.</p>
 <p>I studied several algorithms, including <em>Liner Regression, Logestic Regression, Feed Forward Neural Network, SVM, PCA, K-means, Collaborative filtering etc.</em></p>
 <p>After this course, I can use MATLAB to running simple meachine learning algorithms. That lay foundation for my further study using <em>MVPA</em> and <em>Encoding Models</em>.</p>
 <p>Certification</p>
-<p><img src="http://p1.bqimg.com/4851/eb35a70f39c5d12e.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
+<p><img src="https://i.imgur.com/utR32bg.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
 <h2 id="Principles-of-fMRI-1-—-09-2015-11-2015"><a href="#Principles-of-fMRI-1-—-09-2015-11-2015" class="headerlink" title="Principles of fMRI 1 — 09 2015-11 2015"></a>Principles of fMRI 1 — 09 2015-11 2015</h2><p>In spring 2016 semester, I participated in this course for gaining basic understanding of fMRI.</p>
 <p>In this course, I studied some basic knowledge of fMRI and fMRI data analyze. Mainly about several points: 1)fMRI Data Structure, 2)Basic MR Physics and imaging, 3)Signal, Noise, and <em>BOLD</em> Physiology,4)fMRI Experiment Design,5)Pre-Processing of fMRI Data,6)GLM univariate analyze and <em>t</em>-contrast</p>
 <p>Also, We tried to make a note od this course for Chinese learner. It’s now open access in <a href="https://zhuanlan.zhihu.com/p/22002650" target="_blank" rel="external">Zhihu</a>, has gathered for about 200 up-votes.</p>
 <h2 id="Neural-Networks-for-Machine-Learning-—-10-2016-02-2017"><a href="#Neural-Networks-for-Machine-Learning-—-10-2016-02-2017" class="headerlink" title="Neural Networks for Machine Learning — 10 2016-02 2017"></a>Neural Networks for Machine Learning — 10 2016-02 2017</h2><p>In fall 2016 semester, I participated in this course for gaining more understanding about meachine learning, particularly about (deep) neural networks.</p>
 <p>I learnt about Perceptron, Feed Forward Neural Networ, RBM, Deep Belief Nets, and auto encoders etc. Most importently, I known how to trainning a deep neural network using unsuperviced learning with pre-trainning processing. I also realized that the learning rule of RBM and DBN also share some same point with LTDP in neural system. This course provide me with not only skills and knowledge about neual network ,also inspire me to do futher thinking about meachine learning and neuroscience.</p>
 <p>Certification</p>
-<p><img src="http://p1.bqimg.com/4851/06ae8df18b7163a9.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
+<p><img src="https://i.imgur.com/TwQ6Olt.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
 ]]></content>
     </entry>
     
@@ -136,20 +136,20 @@
 <a id="more"></a>
 <p>In Fang’s lab. I learnt these three skills below.</p>
 <h1 id="Running-my-own-psychophysical-experiments"><a href="#Running-my-own-psychophysical-experiments" class="headerlink" title="Running my own psychophysical experiments"></a>Running my own psychophysical experiments</h1><p>In Fang’s lab. I learnt to programing with PTB(Psychtoolbox) using MATLAB. I carried out a pre-experiment to see how a prior unambigious SFM(Structure from motion) effects the up-coming bistable SFM.</p>
-<p><div align="center"><img src="http://p1.bqimg.com/4851/f6faefbdb49de538.jpg" alt="..." width="..."></div></p>
+<p><div align="center"><img src="https://i.imgur.com/mIKMgsk.jpg" alt="..." width="..."></div></p>
 <center>Figure 1. Carrying my own psychophysics experiments</center> 
 
 <p>The psychophysical protocol show below.</p>
-<p><div align="center"><img src="http://i1.piimg.com/4851/f6ce27c9db8d9eb8.png" alt="601" width="408"></div></p>
+<p><div align="center"><img src="https://i.imgur.com/XaOpJqw.jpg" alt="601" width="408"></div></p>
 <center>Figure 2. The psychophysical protocol of my pre-experiment</center> 
 
 <p>Then I fitted a psychophysical curve to actually ‘see’ this influence.</p>
 <h1 id="Dealing-with-fMRI-raw-data"><a href="#Dealing-with-fMRI-raw-data" class="headerlink" title="Dealing with fMRI raw data"></a>Dealing with fMRI raw data</h1><p>They gave me a fMRI data set used for trainning. Using that, I studied how to use SPM to manipulate these data. Including Preprocessing(Slice-timing correction, Motion Correction, Co-registration, Spacial Normalization, and Spatial Smoothing.), and uni-variation GLM analyze. Figure showed below.</p>
-<p><div align="center"><img src="http://p1.bqimg.com/4851/c32e638b6b97476d.jpg" alt="..." width="..."></div></p>
+<p><div align="center"><img src="https://i.imgur.com/8PhuH0K.jpg" alt="..." width="..."></div></p>
 <center>Figure 3. Manipulate fMRI raw data using SPM 12</center> 
 
 <p>Also, using SPM plug-in tools like XjView and MarsBar, I carried out an ROI analyze. I ploted the BSC in MT+, showed below.</p>
-<p><div align="center"><img src="http://p1.bqimg.com/4851/96d2a3a70c1033c4.jpg" alt="..." width="..."></div></p>
+<p><div align="center"><img src="https://i.imgur.com/qge00mC.jpg" alt="..." width="..."></div></p>
 <center>Figure 4. Bold signal change percentage in MT+ </center> 
 
 
@@ -168,27 +168,27 @@
 <blockquote>
 <p>Kay, K.N.; Naselaris, T.; Gallant, J. (2011): fMRI of human visual areas in response to natural images. CRCNS.org.<br><a href="http://dx.doi.org/10.6080/K0QN64NG" target="_blank" rel="external">http://dx.doi.org/10.6080/K0QN64NG</a></p>
 </blockquote>
-<h1 id="Stimulus"><a href="#Stimulus" class="headerlink" title="Stimulus"></a>Stimulus</h1><p><div align="center"><img src="http://i1.piimg.com/4851/704e84210b37d372.png" alt="100" width="100"></div></p>
+<h1 id="Stimulus"><a href="#Stimulus" class="headerlink" title="Stimulus"></a>Stimulus</h1><p><div align="center"><img src="https://i.imgur.com/4JJ2uIY.png" alt="100" width="100"></div></p>
 <center>Figure 1. A given example of the natural image stimulus</center>  
 
 <p>Subjects view 1870 images while recording their brain activities using fMRI. 1750 of these are for training, the remaining is the test set.</p>
 <p>After the pre-processing procedure. They used GLM to estimate response for every images. Then they choose about 25000 voxels from (V1, V2, V3, V3a, V3b, V4, LatOcc etc.).</p>
-<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><div align="center"><img src="http://i1.piimg.com/4851/98d7f6aff9de2bf3.png" alt="..." width="..."></div></p>
+<h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><div align="center"><img src="https://i.imgur.com/MrZWYKP.jpg" alt="..." width="..."></div></p>
 <center>Figure 2. The overview of the data processing procedures. Mainly in three parts, feature extractions, voxels selection, and main training stage.</center> 
 
 <p>In order to modeling voxels’ tunning dynamic. We use this three-stage method. Including feature extractions, voxels selection, and main training(modeling)stage. </p>
-<h2 id="Procedures-amp-Results"><a href="#Procedures-amp-Results" class="headerlink" title="Procedures &amp; Results"></a>Procedures &amp; Results</h2><h3 id="Extract-features"><a href="#Extract-features" class="headerlink" title="Extract features"></a>Extract features</h3><p>According the theory of the encoding mechanism of the early visual cortex (EVC). Neurons in EVC firing for some particular orientation and spacial frequency in a particular visual position, which we called the receptive field. In fMRI, the activity patterns in the human visual cortex can also reveal what stimulus orientation a person is viewing(Kamitani &amp; Tong, 2005).</p>
-<p>To pick up infomation of orientation and spacial frequency in a natural image. We using the garbor wavelet to project onto every images in different space location, orientation, and spacial frequency, which we called the Gabor wavelet pyramid.</p>
+<h2 id="Procedures-amp-Results"><a href="#Procedures-amp-Results" class="headerlink" title="Procedures &amp; Results"></a>Procedures &amp; Results</h2><h3 id="Extract-features"><a href="#Extract-features" class="headerlink" title="Extract features"></a>Extract features</h3><p>According the theory of the encoding mechanism of the early visual cortex (EVC). Neurons in EVC firing for some particular orientation and spatial frequency in a particular visual position, which we called the receptive field. In fMRI, the activity patterns in the human visual cortex can also reveal what stimulus orientation a person is viewing(Kamitani &amp; Tong, 2005).</p>
+<p>To pick up infomation of orientation and spatial frequency in a natural image. We using the garbor wavelet to project onto every images in different space location, orientation, and spatial frequency, which we called the Gabor wavelet pyramid.</p>
 <p>As for the Gabor wavelet pyramid. Wavelets occur at five (or, in some cases, six) spatial frequencies. This panel depicts one wavelet at each of the first five spatial frequencies. At each spatial frequency f cycles per field-of-view (FOV), wavelets are positioned on an f × f grid, as indicated by the translucent lines.Orientation and phase. At each grid position, wavelets occur at eight orientations and two phases. This panel depicts a complete set of wavelets for a single grid position. Dashed lines indicate the bounds of the mask associated with each wavelet.(Kay et al., 2008) Showed below.</p>
-<p><div align="center"><img src="http://i1.piimg.com/4851/dc03fc9a075abd7d.png" alt="..." width="..."></div></p>
+<p><div align="center"><img src="https://i.imgur.com/3fZu0O3.png" alt="..." width="..."></div></p>
 <center>Figure 3. Gabor wavelet pyramid design.</center> 
 
-<p>There are five different spacial frequency(1,2,4,8,16 FOV). For every single spacial frequency, it has (1,4,16,64,256) types of different position in the visual field. For every position, there are 2 orthogonal phase and 8 different angles(0:22.5:157.5).</p>
+<p>There are five different spatial frequency(1,2,4,8,16 FOV). For every single spatial frequency, it has (1,4,16,64,256) types of different position in the visual field. For every position, there are 2 orthogonal phase and 8 different angles(0:22.5:157.5).</p>
 <p>Together, there are 5456 different gabor wavelets in the Gabor wavelet pyramid. I used the <strong>gabor_fn.m</strong> function to produce a gabor wavelet for the given sf,angle,phase,posi. <a href="https://en.wikipedia.org/wiki/Gabor_filter" target="_blank" rel="external">from Wikipedia</a></p>
 <p>Then, I wrote a function <strong>gaborfit.m</strong> to produce a set of gabor wavelet image directlly. It produce a martix called gab(128x128x5456).Represent 5456 different gabor wavelet image(128x128).</p>
 <p>To compute the projection. I wrote compscript.m (section 1). To compute the projection of 5456 wavelets for 1750 images. The projections for each quadrature pair of wavelets are then squared, summed, and square-rooted, yielding a measure of contrast energy. The result will be in the martix called proj(1750x2728).</p>
 <p>To remove wavelets ouuside the field of the natural images(outside the circle). I wrote a function called <strong>gabdelete</strong> in gabdelete.m. The result will be in the martix called projdeleteedge(1750x2728).</p>
-<h3 id="Training-algorithm"><a href="#Training-algorithm" class="headerlink" title="Training algorithm"></a>Training algorithm</h3><p><div align="center"><img src="http://p1.bpimg.com/4851/2ffdb90439b274fd.png" alt="..." width="..."></div></p>
+<h3 id="Training-algorithm"><a href="#Training-algorithm" class="headerlink" title="Training algorithm"></a>Training algorithm</h3><p><div align="center"><img src="https://i.imgur.com/KRTuZKe.png" alt="..." width="..."></div></p>
 <center>Figure 4. Gabor wavelet pyramid model..</center> 
 
 <p>Here we use multi-variation liner regression to build up the model. Using the features  which we cauculated before using gabor wavelet pyramid model. </p>
@@ -203,27 +203,27 @@
 <p>In order to accelerate the training speed, we tried to reduce dimensions firstly. We did not take orentation into consideration: we averged the 8 gabor wavelet projection for each position.</p>
 <p>Then we can use that new features to fit the model. Using the weight for every location we can reconstruct the population receptive field. </p>
 <p>This method is pretty likely to build up a data driven pRF(population receptive field).</p>
-<p><div align="center"><img src="http://p1.bpimg.com/4851/5bd832ebd9427c9f.png" alt="150" width="300"></div></p>
+<p><div align="center"><img src="https://i.imgur.com/SKdFstr.png" alt="150" width="300"></div></p>
 <center><strong>Figure 5. A given example of the reconstructed pRF.</strong> Left img represent a well-fitted voxel, it’s receptive field is very consentrate and <strong>sparse</strong>. Image in right represent a traditional poorly fitted voxel, it’s receptive field is very confusion.</center> 
 
 <p>I worte _gabor<em>field.m</em> to generate a field map using gaussian functions.<br>The <em>RFvis.m</em> is used for reconstructing a population receptive field map for a given voxels, using the weight computed in the pre-trainning stage and the gabor_field.m, sum it up to form a receptive field map.<br>We need to remove those poorly fitted voxels. We have two ways to select voxels. </p>
 <h4 id="1-Gaussian-Fitted"><a href="#1-Gaussian-Fitted" class="headerlink" title="1. Gaussian Fitted"></a>1. Gaussian Fitted</h4><p>We can using Gaussian function to fitted the reconstructed pRF. The Gaussian RMS width(field vaule in fig 5.) can represent the ‘goodness of fit’, but sometimes some poorly-fitted can also be selected because of some overfitting problem.</p>
 <h4 id="2-R-Squared-sorting"><a href="#2-R-Squared-sorting" class="headerlink" title="2. R-Squared sorting"></a>2. R-Squared sorting</h4><p>To quantify the ‘goodness of fit’. We can also using R-Squared vaule directly. We cauculate R2 of those 25000 voxels and make a sorting. And we can choose the top 500 voxels to do the futher analyze.</p>
 <p>After the R-Squared sorting procedure, the top-10 voxels showed below.</p>
-<p><div align="center"><img src="http://p1.bpimg.com/4851/69189a49aa9fd58b.jpg" alt="..." width="..."></div><br> <center><strong>Figure 5. Top 10 well-fitted voxels.</strong> Figure shows the reconstructed pRF of top 10 well-fitted voxels, it’s all has a relatively ‘sparse’ receptive field</center> </p>
+<p><div align="center"><img src="https://i.imgur.com/yHmJhCj.jpg" alt="..." width="..."></div><br> <center><strong>Figure 5. Top 10 well-fitted voxels.</strong> Figure shows the reconstructed pRF of top 10 well-fitted voxels, it’s all has a relatively ‘sparse’ receptive field</center> </p>
 <p>The anatomical distribution of those 500 voxels showed below.</p>
-<p><div align="center"><img src="http://p1.bqimg.com/4851/2d56f0879a6c869c.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The anatomical distribution of those 500 voxels.</strong></center> </p>
+<p><div align="center"><img src="https://i.imgur.com/mEhVsN9.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The anatomical distribution of those 500 voxels.</strong></center> </p>
 <p>As we can see, a huge amount of voxels are from early visual cortex(V1,V2,V3).</p>
 <p>I wrote <em>causelectedh.m</em> to select 500 voxels, and further more, to run the main-trainning stage below.</p>
 <h3 id="Main-training-stage"><a href="#Main-training-stage" class="headerlink" title="Main-training stage"></a>Main-training stage</h3><p>Have choosen 500 well-fitted voxels. We fitted those voxels with full features(with 8 orientations).<br>I then use this model to predict 500 voxels activities based on 120 natural images in the test set(120 images).<br>Then, We compute R-Squared vaule between actually response value and the predicted vaule of those 500 voxels among those 120 images, using that to generate a 120x120 image.</p>
-<p><div align="center"><img src="http://p1.bpimg.com/4851/5ea10a33ac4cf3bc.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The correlation map of the actually response value and the predicted vaule of those 500 voxels.</strong> The (i,j)position’s color represent the R-Squared vaule between actually response value of the number i th image and the predicted vaule of the j th image of those 500 voxels.</center> </p>
+<p><div align="center"><img src="https://i.imgur.com/3P6Lpj9.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The correlation map of the actually response value and the predicted vaule of those 500 voxels.</strong> The (i,j)position’s color represent the R-Squared vaule between actually response value of the number i th image and the predicted vaule of the j th image of those 500 voxels.</center> </p>
 <p>I wrote <em>corxcmp.m</em> to predict the activity using test set images, and generate this final result.</p>
 <p>In the identifation task. We re-match the target’s brain activities with the best correlated predicted brain activities. In my work, without noise ceiling procedures, the identifation performance is about 58.8%, meanwhile, the chance level is about 0.83%.  </p>
-<p>Using the optimized wights in the main-training stage. We could generate a tuning properties image. It could tell us which orinentation and spacial frequency contribute more to the activity of the voxels.</p>
-<p>As a given example, for the No.23198 voxel, we visualize the weight distribution of the 8 orintations and 5 spacial frequency (5x8).</p>
-<p><div align="center"><img src="http://p1.bqimg.com/4851/7c3e2d670fa3c75c.png" alt="200" width="360"></div><br> <center><strong>Figure 7. The weight distribution of the 8 orintation and 5 spacial frequency for the voxel 23198.</strong> .</center> </p>
+<p>Using the optimized wights in the main-training stage. We could generate a tuning properties image. It could tell us which orinentation and spatial frequency contribute more to the activity of the voxels.</p>
+<p>As a given example, for the No.23198 voxel, we visualize the weight distribution of the 8 orintations and 5 spatial frequency (5x8).</p>
+<p><div align="center"><img src="https://i.imgur.com/wIWDRhV.png" alt="200" width="360"></div><br> <center><strong>Figure 7. The weight distribution of the 8 orintation and 5 spatial frequency for the voxel 23198.</strong> .</center> </p>
 <p> Further more, we plot the tuning properties for the orintations separately.</p>
-<p> <div align="center"><img src="http://p1.bqimg.com/4851/dfeb524e2f63586f.png" alt="200" width="360"></div><br> <center><strong>Figure 8.The tuning properties for the orintations(L) and spacial frequency(R).</strong> .</center> </p>
+<p> <div align="center"><img src="https://i.imgur.com/aZaeQqE.png" alt="200" width="360"></div><br> <center><strong>Figure 8.The tuning properties for the orintations(L) and spatial frequency(R).</strong> .</center> </p>
 <p> We can observe that, this voxel prefer 45 degres, and relevantly prefer higher special frequency. Consist with the encoding theory of the early visual cortex.</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>Gilbert, C. D., &amp; Wiesel, T. N. (1985). Intrinsic connectivity and receptive field properties in visual cortex. Vision research, 25(3), 365-374.</p>
 <p>Chen, N., P. Cai, T. Zhou, B. Thompson, and F. Fang. 2016. ‘Perceptual learning modifies the functional specializations of visual cortical areas’, Proc Natl Acad Sci U S A.</p>
@@ -245,25 +245,24 @@
 <p>Based on that, I repeated some previous research in Badong Chen’s lab, such as decode fMRI signal from primary visual cortex (V1) and reconstruct pattern image from fMRI signal (Miyawaki et al., 2008). Meanwhile, I improved the accuracy of the reconstruction by about 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
 <a id="more"></a>
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Mind-reading is really amazing and exciting. Using modern fMRI(functional magnetic resonance imaging) technique. We can now decoding some infomation from participant’s brain activities. </p>
-<p><img src="http://i1.piimg.com/4851/443c6a1311df7641.jpg" alt="Visual_Img_Rec"></p>
+<p><img src="https://i.imgur.com/T9CTEqS.jpg" alt="Visual_Img_Rec"></p>
 <p>Based on that, I repeated some previous research in Badong Chen’s lab, such as decode fMRI signal from primary visual cortex (V1) and reconstruct pattern image from fMRI signal (Miyawaki et al., 2008). Meanwhile, I improved the accuracy of the reconstruction by about 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
 <p><strong>This article is only a berif introduction of my work.</strong> <strong>You can contact me for the reconstruction result video demo,</strong> <strong>for the source code and for more detail.</strong> </p>
 <h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>Subjects view 12x12 binary(Black or White) pixels images while recoding their brain activities using fMRI. 352 of which are in random. 80s are in regular (The pattern of them are like numbers, etc.), see figure below.</p>
-<p><div align="center"><img src="http://i1.piimg.com/4851/a9eef18ef2223494.png" alt="100" width="200"></div></p>
-<center>figure 1. Left binary image is in random, right is in regular</center> 
+<p><div align="center"><img src="https://i.imgur.com/lmh5H6E.png" alt="100" width="200"></div></p>
+<center><strong>Figure 1.</strong> Left binary image is in random, right is in regular</center> 
 
 <p>Then we use GLM procedures to modeling brain activity for every stimuli.</p>
 <p>Firstly, I use MVPA(Multi-Voxels pattern analyze) to build up a model for every pixel (1x1 scale).</p>
 <p>We then everaged the vaule of 2 neighbouring pixels vertically (2x1 scale) and horizentally (1x2 scale), and 4 neighbouring pixels (2x2 scale). Figure showed below.(Miyawaki et al., 2008)</p>
-<p><div align="center"><img src="http://i1.piimg.com/4851/663f59ac6526eb25.png" alt="..." width="..."></div></p>
-<center>figure 2. Multi-scale local image bases for buliding MVPA model</center> 
+<p><div align="center"><img src="https://i.imgur.com/SvIXgX0.png" alt="..." width="..."></div></p>
+<center><strong>Figure 2.</strong> Multi-scale local image bases for buliding MVPA model</center> 
 
 <p>In MVPA, I firstly choosed 3037 voxels from V1, then caculated Pearson’s r for each voxels. Then sort them using r vaule. We choose the 50 voxels from it(top 30 and last 20). Then we trainning a SVM classifier to build up the MVPA model using 352 random images as a trainning set. The code example showed below.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> [ SVMStruct,corvox ] = singlevoxtrai(trainingsetnum,posi,beta,stim)%This model train a SVM model to a given posi of the stim % trainingsetnum=1:176;% posi=[6,6];%% section a,trainnning one single voxal trainingset=beta(:,trainingsetnum);[~,selectvox,~] = voxcor(posi(1,1),posi(1,2),stim(:,:,...trainingsetnum),trainingset);%select the corresponding voxels of the stimTraining=beta(selectvox,trainingsetnum)<span class="string">'; Group=reshape(stim(posi(1,1),posi(1,2),:),size(stim,3),1); Group=Group(trainingsetnum,:);SVMStruct = svmtrain(Training,Group,'</span>kernel_function<span class="string">','</span>polynomial<span class="string">'); corvox=selectvox;end</span></div></pre></td></tr></table></figure>
 <p>Then we use the remaining 80 examples to test our model, using the MVPA models we trainned before, to compute the pixels’ vaule given brain activities.</p>
 <p>Repeat these procedures to every pixels in 4 scale. After combining 4 scale using liner regression for each pixels. Finally, we got a reconstructed image using subject’s brain activities. We compute deviation using reconstruced image and the actually image (square-root error). The example show below.</p>
-<p><div align="center"><img src="http://i1.piimg.com/4851/f36c9ecee5c498e3.png" alt="..." width="..."></div></p>
-<center>figure 3. An example of the reconstructed image</center> 
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/RWt4TnVn6ho" frameborder="0" allowfullscreen></iframe></center><br><center><strong>Figure 3</strong>. The demo video of the reconstructed image</center> 
 
 
 
