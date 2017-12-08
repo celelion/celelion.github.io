@@ -4,9 +4,63 @@
   
     
     <entry>
+      <title><![CDATA[My own B-Pod System using FPGA and MATLAB]]></title>
+      <url>http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/</url>
+      <content type="html"><![CDATA[<p>Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.</p>
+<a id="more"></a>
+<p>I open-accessed all my code on Github, here is the <a href="https://github.com/celelion/BPod_FPGA" target="_blank" rel="external">LINK</a>.</p>
+<h1 id="About-the-BPOD"><a href="#About-the-BPOD" class="headerlink" title="About the BPOD"></a>About the BPOD</h1><p>The B-Pod system is developed by Joshua Sanders in his initial open research instruments (The BPOD r0.5) while completing his PhD in Kepecs Lab at Cold Spring Harbor Laboratory.</p>
+<h1 id="Bacis-idea-of-the-BPOD-system"><a href="#Bacis-idea-of-the-BPOD-system" class="headerlink" title="Bacis idea of the BPOD system"></a>Bacis idea of the BPOD system</h1><p>The basic idea of the bpod is to interact with the rodent using light or sound cue, and give them reward when they perform will. So the core problem is to detect rodents’ activity.</p>
+<p><img src="https://i.imgur.com/TlnjD6K.png" alt="The animal poke in and block the IR"></p>
+<center><strong>Fig 1.</strong> We have several LEDs around the ports and the sound in the mouse box to ‘tell’ the animal ‘what to do’</center>
+
+
+<p>To do so, we are using an IR emitter paired with an IR collector for each port. So everytime when the animal ‘poke’ into the port. The light from IR emitter will be block, so we can detect voltage change from the IR collector.</p>
+<p><img src="https://i.imgur.com/5vgmCaZ.png" alt="The animal poke in and block the IR"></p>
+<center><strong>Fig 2.</strong> We are using IR to detect animals’ behaviour</center>
+
+<h1 id="Using-FPGA-to-control-and-monitering-the-devices"><a href="#Using-FPGA-to-control-and-monitering-the-devices" class="headerlink" title="Using FPGA to control and monitering the devices."></a>Using FPGA to control and monitering the devices.</h1><p>In my project, I’m using a FPGA(Field-Programmable Gate Array) to control the LEDs and water value in the three mouse ports. Meanwhile, The FPGA is also used for monitering the IR collector of the three ports.<br><img src="https://i.imgur.com/9pT9kNl.png" alt="B-Pod-FPGA-PC-connection"></p>
+<center><strong>Fig 3.</strong> The connection diagram of the firmware</center>
+
+<p>The FPGA is connected to the MAC computer via a serial-USB convert line. And the MATLAB is able to talk with the FPGA via this serial port.</p>
+<p>Once the IR system detect the mouse’s activity, the IR collector will sent signals to the FPGA. Then the FPGA will send an 8-bits information contains that information. </p>
+<p>The FPGA keeps contraling the LEDs and water pump. When the MATLAB want to change a state(For example, turn on/off the light, open the water). It will sent a 8-bits information via serial port to re-write the state vector in FPGA. FPGA then change the target voltage in it’s ports.</p>
+<p>Because the voltage of the IR system is 5V and the voltage of the FPGA is 3.3v, I passed the IR output to a voltage convertor and a 74HC14 to reverse the voltage. The it will be sent to the FPGA, 3.3v means a ‘block’ is there, and 0v means this port is clear.</p>
+<p><img src="https://i.imgur.com/MFZnpOP.png" alt="FPGA-connection"></p>
+<center><strong>Fig 4.</strong> The connection diagram of the FPGA</center>
+
+<p>Connected all these firmware things. The FPGA, the LEDs, the IR ports, the 74HC14 chips and the computer, It looks like this. But it works pretty well.</p>
+<p><img src="https://i.imgur.com/WiYHVMt.png" alt="The-connected-sys"></p>
+<center><strong>Fig 5.</strong> The testing firmware</center>
+
+<h1 id="Using-MATLAB-to-control-the-FPGA-using-FSM"><a href="#Using-MATLAB-to-control-the-FPGA-using-FSM" class="headerlink" title="Using MATLAB to control the FPGA using FSM"></a>Using MATLAB to control the FPGA using FSM</h1><p>In the computer, the MATLAB will generate a FSM(Finate State Meachine) based on the design of the experiment protocol to control the FPGA. The animals’ behavioul will trigger the stage switching.</p>
+<p>We define a class to describe the experiment protocol. The simplist version is called the ‘Operant’, in <a href="https://github.com/celelion/BPod_FPGA/tree/master/Protocols/Operant" target="_blank" rel="external">‘Protocols/Operant’</a> path. It contains several sub-functions.</p>
+<ul>
+<li>init Section: Initialze the protocol, creating Sounds etc.</li>
+<li>useSetting Section: do some basic settings to the session. and load some old settings from previous experiment.</li>
+<li>PreparNextTrial Section: set the paramenters of the next trial based on prob. or history performance.</li>
+<li>RunTrial Section: Generate the FSM and run the trial.</li>
+<li>TrialComplete Section: do dome basic computation and analyze to this trial’s data.</li>
+<li>saveTrial section: save this trials data to the table.</li>
+</ul>
+<p>The <a href="https://github.com/celelion/BPod_FPGA/blob/master/System_Files/Modules/dispatch.m" target="_blank" rel="external">dispatch.m</a> in the modules path will call different parts of that class again and again. It also have many try-catch sentences, so that it will isolate bugs within each section and not affect running of the experiment.</p>
+<p>Also, I designed a subject management system there. We we input the subject’s id when starting the experiment, the program will record the stage and the information. So everthing will go automatically.</p>
+<h1 id="The-Basic-Trainning-Protocol"><a href="#The-Basic-Trainning-Protocol" class="headerlink" title="The Basic Trainning Protocol"></a>The Basic Trainning Protocol</h1><p>My system contains a basic Protocol named ‘Operant’. It’s a very general protocol that can be used to train animals to associate lights or sounds with reward.</p>
+<p>To train the animals, we need to follow up a stage-to-stage procedure. The basic idea is shown below. In ‘Operant’, we have three stages.</p>
+<p><img src="https://i.imgur.com/fY8Rsvx.png" alt="Stage_1"></p>
+<center><strong>Fig 6.</strong> State diagram of the stage 1</center>
+
+<p>First stage: ‘reward_train’. We will give them unconditional reward, just let them learn to drink. When they learnt how to drink, we will jump to the stage 2.</p>
+<p><img src="https://i.imgur.com/PDTS8yn.png" alt="Stage_2"></p>
+<p><center><strong>Fig 7.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.</p>
+<h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’m working on the water pump and the rig-box. After that, I’ll try to train several mouse and rats.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[SURP in NYU Shanghai]]></title>
       <url>http://www.jingjie.site/2017/11/04/SURP%20in%20NYU%20Shanghai/</url>
-      <content type="html"><![CDATA[<p>In the summer, I joined the SURP(Summer Undergraduate Program). Ran a 10-week research experience in NYU-ECNU institute for brain and cognitive sciences at NYU(New York University) Shanghai.</p>
+      <content type="html"><![CDATA[<p>In the summer, I joined the SURP (Summer Undergraduate Research Program). Ran a 10-week research experience in NYU-ECNU institute for brain and cognitive sciences at NYU(New York University) Shanghai.</p>
 <a id="more"></a>
 <p>NYU’s News about me and the SURP:<br><a href="https://research.shanghai.nyu.edu/centers-and-institutes/brain/news/nurturing-science-careers-nyu-shanghai%E2%80%99s-incubator-future" target="_blank" rel="external">Nurturing Science Careers: NYU Shanghai’s Incubator for Future Neuroscientists</a></p>
 <p>Because my previous research in Visual Working memory, I was paired up with Dr. Jeffrey Erlich, Assistant Professor of Neural and Cognitive Sciences at NYU Shanghai for their shared interest in working memory.</p>
