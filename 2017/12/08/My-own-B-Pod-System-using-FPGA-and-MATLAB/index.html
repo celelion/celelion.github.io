@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="Dec 08, 2017" />
-        <meta property="article:modified_time" content="Dec 08, 2017" />
+        <meta property="article:modified_time" content="Dec 14, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "My own B-Pod System using FPGA and MATLAB",
     "url": "http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/index.html",
     "datePublished": "Dec 08, 2017",
-    "dateModified": "Dec 08, 2017",
+    "dateModified": "Dec 14, 2017",
     "description": "Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -343,7 +343,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#About-the-BPOD"><span class="post-toc-number">1.</span> <span class="post-toc-text">About the BPOD</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Bacis-idea-of-the-BPOD-system"><span class="post-toc-number">2.</span> <span class="post-toc-text">Bacis idea of the BPOD system</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Using-FPGA-to-control-and-monitering-the-devices"><span class="post-toc-number">3.</span> <span class="post-toc-text">Using FPGA to control and monitering the devices.</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Using-MATLAB-to-control-the-FPGA-using-FSM"><span class="post-toc-number">4.</span> <span class="post-toc-text">Using MATLAB to control the FPGA using FSM</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#The-Basic-Trainning-Protocol"><span class="post-toc-number">5.</span> <span class="post-toc-text">The Basic Trainning Protocol</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#The-Next-Step"><span class="post-toc-number">6.</span> <span class="post-toc-text">The Next Step</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#About-the-BPOD"><span class="post-toc-number">1.</span> <span class="post-toc-text">About the BPOD</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Why-BPOD"><span class="post-toc-number">2.</span> <span class="post-toc-text">Why BPOD</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#More-detailed-examples"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">More detailed examples</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Bacis-idea-of-the-BPOD-system"><span class="post-toc-number">3.</span> <span class="post-toc-text">Bacis idea of the BPOD system</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Using-FPGA-to-control-and-monitering-the-devices"><span class="post-toc-number">4.</span> <span class="post-toc-text">Using FPGA to control and monitering the devices.</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Using-MATLAB-to-control-the-FPGA-using-FSM"><span class="post-toc-number">5.</span> <span class="post-toc-text">Using MATLAB to control the FPGA using FSM</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Making-the-Rig-Box"><span class="post-toc-number">6.</span> <span class="post-toc-text">Making the Rig Box</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#The-Basic-Trainning-Protocol"><span class="post-toc-number">7.</span> <span class="post-toc-text">The Basic Trainning Protocol</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#The-Next-Step"><span class="post-toc-number">8.</span> <span class="post-toc-text">The Next Step</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#References"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">References</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -485,29 +485,41 @@
         <p>Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.</p>
 <a id="more"></a>
 <p>I open-accessed all my code on Github, here is the <a href="https://github.com/celelion/BPod_FPGA" target="_blank" rel="external">LINK</a>.</p>
-<h1 id="About-the-BPOD"><a href="#About-the-BPOD" class="headerlink" title="About the BPOD"></a>About the BPOD</h1><p>The B-Pod system is developed by Joshua Sanders in his initial open research instruments (The BPOD r0.5) while completing his PhD in Kepecs Lab at Cold Spring Harbor Laboratory.</p>
-<h1 id="Bacis-idea-of-the-BPOD-system"><a href="#Bacis-idea-of-the-BPOD-system" class="headerlink" title="Bacis idea of the BPOD system"></a>Bacis idea of the BPOD system</h1><p>The basic idea of the bpod is to interact with the rodent using light or sound cue, and give them reward when they perform will. So the core problem is to detect rodents’ activity.</p>
+<h1 id="About-the-BPOD"><a href="#About-the-BPOD" class="headerlink" title="About the BPOD"></a>About the BPOD</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
+<h1 id="Why-BPOD"><a href="#Why-BPOD" class="headerlink" title="Why BPOD"></a>Why BPOD</h1><p>Traditional rodent behavior experiments such as water maze have many limitations.Althrough learning is involved in that task, however, we can not isolate the different level of cognitive process in that task, such as sensory processing, working memory retention or the formation of dicision making. The learning of such a traditional task is also simple. Also, we cannot study how the brain dealing with uncertainty in decision-making.</p>
+<p>To study different level of cognitive process in the rodent (Guo et al., 2014), the neural mechanism of learning the complex task (Liu et al., 2016), and to study how the brain dealing with stochastic (Tervo et al., 2014). We need a more powerful tools to generate sensory cue, and detect the animals’ behavior. That’s why we need the B-Pod system.</p>
+<h2 id="More-detailed-examples"><a href="#More-detailed-examples" class="headerlink" title="More detailed examples"></a>More detailed examples</h2><p>If we want to study the working memory(WM) and the WM related decision making process in the rodent, the major method is to design a delay resonse task for the rodent. Such as auditory based(Erlich et al., 2011),whisker based(Guo et al., 2014), or visual based delay response task(Goard et al., 2016).</p>
+<p>In such a traditional delay response task, each trial contains about 3 phases. In the first phase, we give the subject a sensory cue (Such as a sound beep in a specific frequency, or a visual stimulus of a given directions or colors). Then there will be a delay period(Phase 2), the subject need to retent the information they got, and then(in phase 3), based on such information, make a specific behavior output(Such as poke to a specific port, lick/no lick or lick left/right) to gain water reward.</p>
+<p><img src="https://i.imgur.com/nYmKGNr.png" alt="Traditional working memory task for the rodent"></p>
+<center><strong>Fig 1.</strong> Traditional working memory task for the rodent</center>
+
+<p>To study how the brain dealing with stochastic, we can give then uncertaint reward, and observe how the animals adjust their behaivour policy to maxinum the profit. And study the source to generate stochastic(ACC) and to dealing with uncertainty(OFC). (Tervo et al., 2014)</p>
+<p><img src="https://i.imgur.com/7qD00AG.png" alt="how the brain dealing with stochastic"></p>
+<center><strong>Fig 2.</strong> How the brain dealing with stochastic</center>
+
+<p>Based on that, we need more powerful tools to train the animals to perform a decision-making involved complex task. That’s why I designed and made that device. </p>
+<h1 id="Bacis-idea-of-the-BPOD-system"><a href="#Bacis-idea-of-the-BPOD-system" class="headerlink" title="Bacis idea of the BPOD system"></a>Bacis idea of the BPOD system</h1><p>The basic idea of the bpod is to interact with the rodent using light or sound cue, and give them reward when they perform well. So the core problem is to detect rodents’ activity.</p>
 <p><img src="https://i.imgur.com/TlnjD6K.png" alt="The animal poke in and block the IR"></p>
-<center><strong>Fig 1.</strong> We have several LEDs around the ports and the sound in the mouse box to ‘tell’ the animal ‘what to do’</center>
+<center><strong>Fig 3.</strong> We have several LEDs around the ports and the sound in the mouse box to ‘tell’ the animal ‘what to do’</center>
 
 
 <p>To do so, we are using an IR emitter paired with an IR collector for each port. So everytime when the animal ‘poke’ into the port. The light from IR emitter will be block, so we can detect voltage change from the IR collector.</p>
 <p><img src="https://i.imgur.com/5vgmCaZ.png" alt="The animal poke in and block the IR"></p>
-<center><strong>Fig 2.</strong> We are using IR to detect animals’ behaviour</center>
+<center><strong>Fig 4.</strong> We are using IR to detect animals’ behavior</center>
 
-<h1 id="Using-FPGA-to-control-and-monitering-the-devices"><a href="#Using-FPGA-to-control-and-monitering-the-devices" class="headerlink" title="Using FPGA to control and monitering the devices."></a>Using FPGA to control and monitering the devices.</h1><p>In my project, I’m using a FPGA(Field-Programmable Gate Array) to control the LEDs and water value in the three mouse ports. Meanwhile, The FPGA is also used for monitering the IR collector of the three ports.<br><img src="https://i.imgur.com/9pT9kNl.png" alt="B-Pod-FPGA-PC-connection"></p>
-<center><strong>Fig 3.</strong> The connection diagram of the firmware</center>
+<h1 id="Using-FPGA-to-control-and-monitering-the-devices"><a href="#Using-FPGA-to-control-and-monitering-the-devices" class="headerlink" title="Using FPGA to control and monitering the devices."></a>Using FPGA to control and monitering the devices.</h1><p>In my project, I’m using a FPGA(Field-Programmable Gate Array) to control the LEDs and water valve in the three mouse ports. Meanwhile, The FPGA is also used for monitering the IR collector of the three ports.<br><img src="https://i.imgur.com/9pT9kNl.png" alt="B-Pod-FPGA-PC-connection"></p>
+<center><strong>Fig 5.</strong> The connection diagram of the firmware</center>
 
 <p>The FPGA is connected to the MAC computer via a serial-USB convert line. And the MATLAB is able to talk with the FPGA via this serial port.</p>
 <p>Once the IR system detect the mouse’s activity, the IR collector will sent signals to the FPGA. Then the FPGA will send an 8-bits information contains that information. </p>
-<p>The FPGA keeps contraling the LEDs and water pump. When the MATLAB want to change a state(For example, turn on/off the light, open the water). It will sent a 8-bits information via serial port to re-write the state vector in FPGA. FPGA then change the target voltage in it’s ports.</p>
+<p>The FPGA keeps contraling the LEDs and water valve. When the MATLAB want to change a state(For example, turn on/off the light, open the water). It will sent a 8-bits information via serial port to re-write the state vector in FPGA. FPGA then change the target voltage in it’s ports.</p>
 <p>Because the voltage of the IR system is 5V and the voltage of the FPGA is 3.3v, I passed the IR output to a voltage convertor and a 74HC14 to reverse the voltage. The it will be sent to the FPGA, 3.3v means a ‘block’ is there, and 0v means this port is clear.</p>
 <p><img src="https://i.imgur.com/MFZnpOP.png" alt="FPGA-connection"></p>
-<center><strong>Fig 4.</strong> The connection diagram of the FPGA</center>
+<center><strong>Fig 6.</strong> The connection diagram of the FPGA</center>
 
 <p>Connected all these firmware things. The FPGA, the LEDs, the IR ports, the 74HC14 chips and the computer, It looks like this. But it works pretty well.</p>
 <p><img src="https://i.imgur.com/WiYHVMt.png" alt="The-connected-sys"></p>
-<center><strong>Fig 5.</strong> The testing firmware</center>
+<center><strong>Fig 7.</strong> The testing firmware</center>
 
 <h1 id="Using-MATLAB-to-control-the-FPGA-using-FSM"><a href="#Using-MATLAB-to-control-the-FPGA-using-FSM" class="headerlink" title="Using MATLAB to control the FPGA using FSM"></a>Using MATLAB to control the FPGA using FSM</h1><p>In the computer, the MATLAB will generate a FSM(Finate State Meachine) based on the design of the experiment protocol to control the FPGA. The animals’ behavioul will trigger the stage switching.</p>
 <p>We define a class to describe the experiment protocol. The simplist version is called the ‘Operant’, in <a href="https://github.com/celelion/BPod_FPGA/tree/master/Protocols/Operant" target="_blank" rel="external">‘Protocols/Operant’</a> path. It contains several sub-functions.</p>
@@ -521,15 +533,39 @@
 </ul>
 <p>The <a href="https://github.com/celelion/BPod_FPGA/blob/master/System_Files/Modules/dispatch.m" target="_blank" rel="external">dispatch.m</a> in the modules path will call different parts of that class again and again. It also have many try-catch sentences, so that it will isolate bugs within each section and not affect running of the experiment.</p>
 <p>Also, I designed a subject management system there. We we input the subject’s id when starting the experiment, the program will record the stage and the information. So everthing will go automatically.</p>
+<h1 id="Making-the-Rig-Box"><a href="#Making-the-Rig-Box" class="headerlink" title="Making the Rig Box"></a>Making the Rig Box</h1><p>The box was made by laser cutted Plexiglass. I drwan the sketch using AutoCAD.<br><img src="https://i.imgur.com/XNTjUvO.png" alt="The sketch of the Rig Box"></p>
+<center><strong>Fig 8.</strong> The sketch of the Rig Box</center>
+
+<p>And then we manufact the mouse poke port using 3D priting technique.<br><img src="https://i.imgur.com/CJQFxya.jpg" alt="the 3D model of the mouse port"></p>
+<center><strong>Fig 9.</strong> the 3D model of the mouse port</center>
+
+<p>The hole is reserved for the IR LEDs and for the water tubes.</p>
+<p>Here is the fianl results after assembling.<br><img src="https://i.imgur.com/RxjzSXa.jpg" alt="Fianl Rig box"></p>
+<center><strong>Fig 10.</strong> Assembled Rig box - front view</center>
+
+<p><img src="https://i.imgur.com/KKmoxAL.png" alt="Final Rig Box - Back view"></p>
+<center><strong>Fig 11.</strong> Assembled Rig box - back view</center>
+
+<p>Before each run, we should manully test the rig system by calling rig_test function.</p>
+<p>In the future, I will make up a PCB version of the poke-wall system. To get more stable performance.</p>
 <h1 id="The-Basic-Trainning-Protocol"><a href="#The-Basic-Trainning-Protocol" class="headerlink" title="The Basic Trainning Protocol"></a>The Basic Trainning Protocol</h1><p>My system contains a basic Protocol named ‘Operant’. It’s a very general protocol that can be used to train animals to associate lights or sounds with reward.</p>
 <p>To train the animals, we need to follow up a stage-to-stage procedure. The basic idea is shown below. In ‘Operant’, we have three stages.</p>
 <p><img src="https://i.imgur.com/fY8Rsvx.png" alt="Stage_1"></p>
-<center><strong>Fig 6.</strong> State diagram of the stage 1</center>
+<center><strong>Fig 12.</strong> State diagram of the stage 1</center>
 
 <p>First stage: ‘reward_train’. We will give them unconditional reward, just let them learn to drink. When they learnt how to drink, we will jump to the stage 2.</p>
 <p><img src="https://i.imgur.com/PDTS8yn.png" alt="Stage_2"></p>
-<p><center><strong>Fig 7.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.</p>
-<h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’m working on the water pump and the rig-box. After that, I’ll try to train several mouse and rats.</p>
+<p><center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.</p>
+<h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’ve completed the trainning system. I’ll try to train several mouse and rats shortly after.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li>Tervo, D. G. R., Proskurin, M., Manakov, M., Kabra, M., Vollmer, A., Branson, K., &amp; Karpova, A. Y. (2014). Behavioral variability through stochastic choice and its gating by anterior cingulate cortex. Cell, 159(1), 21-32. doi:10.1016/j.cell.2014.08.037</li>
+<li>Erlich, J. C., Bialek, M., &amp; Brody, C. D. (2011). A cortical substrate for memory-guided orienting in the rat. Neuron, 72(2), 330-343. doi:10.1016/j.neuron.2011.07.010</li>
+<li>Liu, D., Gu, X., Zhu, J., Zhang, X., Han, Z., Yan, W., . . . Li, C. T. (2014). Medial prefrontal activity during delay period contributes to learning of a working memory task. Science, 346(6208), 458-463. doi:10.1126/science.1256573</li>
+<li>Guo, Zengcai V., Li, N., Huber, D., Ophir, E., Gutnisky, D., Ting, Jonathan T., . . . Svoboda, K. (2014). Flow of Cortical Activity Underlying a Tactile Decision in Mice. Neuron, 81(1), 179-194. doi:10.1016/j.neuron.2013.10.020</li>
+<li>Guo, Z. V., Inagaki, H. K., Daie, K., Druckmann, S., Gerfen, C. R., &amp; Svoboda, K. (2017). Maintenance of persistent activity in a frontal thalamocortical loop. Nature, 545(7653), 181-186. doi:10.1038/nature22324</li>
+<li>Hanks, T. D., Kopec, C. D., Brunton, B. W., Duan, C. A., Erlich, J. C., &amp; Brody, C. D. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220-223. doi:10.1038/nature14066</li>
+<li>Goard, M. J., Pho, G. N., Woodson, J., &amp; Sur, M. (2016). Distinct roles of visual, parietal, and frontal motor cortices in memory-guided sensorimotor decisions. eLife, 5. doi:10.7554/eLife.13764</li>
+</ul>
 
     
 
