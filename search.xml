@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[My own B-Pod System using FPGA and MATLAB]]></title>
       <url>http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/</url>
-      <content type="html"><![CDATA[<p>Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.</p>
+      <content type="html"><![CDATA[<p>Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.</p>
 <a id="more"></a>
 <p>I open-accessed all my code on Github, here is the <a href="https://github.com/celelion/BPod_FPGA" target="_blank" rel="external">LINK</a>.</p>
 <h1 id="About-the-BPOD"><a href="#About-the-BPOD" class="headerlink" title="About the BPOD"></a>About the BPOD</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
@@ -79,7 +79,17 @@
 
 <p>First stage: ‘reward_train’. We will give them unconditional reward, just let them learn to drink. When they learnt how to drink, we will jump to the stage 2.</p>
 <p><img src="https://i.imgur.com/PDTS8yn.png" alt="Stage_2"></p>
-<p><center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.</p>
+<center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.<br><br># Running on Real Rodent<br><img src="https://i.imgur.com/IGX2sn3.png?1" alt="Runninng test on real mouse"><br><center><strong>Fig 14.</strong> Runninng test on real mouse</center>
+
+<p>After complete the whole things, I luckily found some mouse to conduct some real test. To make sure that my devices can detect real mouse’s behaviour and delivery reward water.</p>
+<p><img src="https://i.imgur.com/6rKnVle.png" alt="the mouse can drink!"></p>
+<center><strong>Fig 15.</strong> The mouse is drinking on the BotC port after a successful trial</center>
+
+<p>When the mouse do poke during ITI peroid, they will recieve violation sound.</p>
+<p><img src="https://i.imgur.com/fXqlyuK.png" alt="poke during ITI"></p>
+<center><strong>Fig 16.</strong> The mouse went to TopL port during ITI</center>
+
+<p>The testing results reveal that our devices can robustly capture rodent’s poking behavior, give the cue and delivery reward water.</p>
 <h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’ve completed the trainning system. I’ll try to train several mouse and rats shortly after.</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
 <li>Tervo, D. G. R., Proskurin, M., Manakov, M., Kabra, M., Vollmer, A., Branson, K., &amp; Karpova, A. Y. (2014). Behavioral variability through stochastic choice and its gating by anterior cingulate cortex. Cell, 159(1), 21-32. doi:10.1016/j.cell.2014.08.037</li>

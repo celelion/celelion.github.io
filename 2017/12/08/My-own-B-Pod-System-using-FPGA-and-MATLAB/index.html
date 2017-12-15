@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Jingjie Li">
-    <meta name="description" itemprop="description" content="Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.">
+    <meta name="description" itemprop="description" content="Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.">
     <meta name="keywords" content="null,Scholar,News,XJTU,Hardware">
 
     <!-- Site Verification -->
@@ -67,17 +67,17 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="My own B-Pod System using FPGA and MATLAB | JingjieLi’s Brain">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.">
+    <meta property="og:description" content="Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.">
     <meta property="og:article:tag" content="Scholar"> <meta property="og:article:tag" content="News"> <meta property="og:article:tag" content="XJTU"> <meta property="og:article:tag" content="Hardware"> 
 
     
         <meta property="article:published_time" content="Dec 08, 2017" />
-        <meta property="article:modified_time" content="Dec 14, 2017" />
+        <meta property="article:modified_time" content="Dec 15, 2017" />
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="My own B-Pod System using FPGA and MATLAB | JingjieLi’s Brain">
-    <meta name="twitter:description" content="Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.">
+    <meta name="twitter:description" content="Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="http://www.jingjie.site" />
@@ -113,8 +113,8 @@
     "headline": "My own B-Pod System using FPGA and MATLAB",
     "url": "http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/index.html",
     "datePublished": "Dec 08, 2017",
-    "dateModified": "Dec 14, 2017",
-    "description": "Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.",
+    "dateModified": "Dec 15, 2017",
+    "description": "Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://www.jingjie.site"
@@ -482,7 +482,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Working with rodents in NYU Shanghai last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. So I can use that to carry out my own rodent experiment in the future.</p>
+        <p>Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.</p>
 <a id="more"></a>
 <p>I open-accessed all my code on Github, here is the <a href="https://github.com/celelion/BPod_FPGA" target="_blank" rel="external">LINK</a>.</p>
 <h1 id="About-the-BPOD"><a href="#About-the-BPOD" class="headerlink" title="About the BPOD"></a>About the BPOD</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
@@ -555,7 +555,17 @@
 
 <p>First stage: ‘reward_train’. We will give them unconditional reward, just let them learn to drink. When they learnt how to drink, we will jump to the stage 2.</p>
 <p><img src="https://i.imgur.com/PDTS8yn.png" alt="Stage_2"></p>
-<p><center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.</p>
+<center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.<br><br># Running on Real Rodent<br><img src="https://i.imgur.com/IGX2sn3.png?1" alt="Runninng test on real mouse"><br><center><strong>Fig 14.</strong> Runninng test on real mouse</center>
+
+<p>After complete the whole things, I luckily found some mouse to conduct some real test. To make sure that my devices can detect real mouse’s behaviour and delivery reward water.</p>
+<p><img src="https://i.imgur.com/6rKnVle.png" alt="the mouse can drink!"></p>
+<center><strong>Fig 15.</strong> The mouse is drinking on the BotC port after a successful trial</center>
+
+<p>When the mouse do poke during ITI peroid, they will recieve violation sound.</p>
+<p><img src="https://i.imgur.com/fXqlyuK.png" alt="poke during ITI"></p>
+<center><strong>Fig 16.</strong> The mouse went to TopL port during ITI</center>
+
+<p>The testing results reveal that our devices can robustly capture rodent’s poking behavior, give the cue and delivery reward water.</p>
 <h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’ve completed the trainning system. I’ll try to train several mouse and rats shortly after.</p>
 <h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
 <li>Tervo, D. G. R., Proskurin, M., Manakov, M., Kabra, M., Vollmer, A., Branson, K., &amp; Karpova, A. Y. (2014). Behavioral variability through stochastic choice and its gating by anterior cingulate cortex. Cell, 159(1), 21-32. doi:10.1016/j.cell.2014.08.037</li>
