@@ -254,30 +254,30 @@
     <entry>
       <title><![CDATA[Courses I've taken (MOOC)]]></title>
       <url>http://www.jingjie.site/2017/02/15/courses/</url>
-      <content type="html"><![CDATA[<p>As cognitive neuroscience a interdisciplinary subject, carrying out research in this field need some other skills and knowledge in math and programming etc.</p>
-<p>In order to strengthen my programming skills and to gain some knowledge of other interdisciplinary subjects(Data Science, Meachine Learning). I participated in several online courses(MOOCs), mainly in <a href="https://www.coursera.org" target="_blank" rel="external">Coursea.org</a>.</p>
+      <content type="html"><![CDATA[<p>As cognitive neuroscience a interdisciplinary subject, we need some other skills and knowledge in order to carry out research in this field such like math and programming etc.</p>
+<p>In order to strengthen my programming skills and gain some knowledge about other interdisciplinary subjects(Data Science, Meachine Learning). I took several online courses(MOOCs), mainly in <a href="https://www.coursera.org" target="_blank" rel="external">Coursea.org</a>.</p>
 <a id="more"></a>
-<h1 id="Moocs-I’ve-Taken"><a href="#Moocs-I’ve-Taken" class="headerlink" title="Moocs I’ve Taken"></a>Moocs I’ve Taken</h1><h2 id="Courses-List"><a href="#Courses-List" class="headerlink" title="Courses List"></a>Courses List</h2><p>(The courses I’ve taken in school showed in my Transcript). MOOCs are listed below.</p>
+<h1 id="Moocs-I’ve-Taken"><a href="#Moocs-I’ve-Taken" class="headerlink" title="Moocs I’ve Taken"></a>Moocs I’ve Taken</h1><h2 id="Courses-List"><a href="#Courses-List" class="headerlink" title="Courses List"></a>Courses List</h2><p>(The courses I’ve taken in school was recorded in my Transcript). MOOCs are listed below.</p>
 <ul>
 <li><a href="https://www.coursera.org/learn/matlab" target="_blank" rel="external">Introduction to Programming with MATLAB</a></li>
 <li><a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="external">Meachine Learning</a></li>
 <li><a href="https://www.coursera.org/learn/functional-mri" target="_blank" rel="external">Principles of fMRI 1</a></li>
 <li><a href="https://www.coursera.org/learn/neural-networks" target="_blank" rel="external">Neural Networks for Machine Learning</a></li>
 </ul>
-<h2 id="Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015"><a href="#Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015" class="headerlink" title="Introduction to Programming with MATLAB — 07 2015-09 2015"></a>Introduction to Programming with MATLAB — 07 2015-09 2015</h2><p>After graduate from high school, I participated in this course in the up-coming summer vocation. In order to improve my programming skills with MATLAB. This course benefit me a lot for further study and research.</p>
+<h2 id="Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015"><a href="#Introduction-to-Programming-with-MATLAB-—-07-2015-09-2015" class="headerlink" title="Introduction to Programming with MATLAB — 07 2015-09 2015"></a>Introduction to Programming with MATLAB — 07 2015-09 2015</h2><p>After graduate from high school, I took this course in the up-coming summer vocation in order to improve my programming skills about MATLAB. This course benefit me a lot for my further study and research with MATLAB.</p>
 <p>Certification</p>
 <p><img src="https://i.imgur.com/i8prk4v.jpg" alt="MATLAB_coursera_LIJINGJIE"></p>
-<h2 id="Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015"><a href="#Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015" class="headerlink" title="Meachine Learning (By Andrew Ng) — 09 2015-11 2015"></a>Meachine Learning (By Andrew Ng) — 09 2015-11 2015</h2><p>Further, I participated in this course in the first semester of freshman.</p>
+<h2 id="Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015"><a href="#Meachine-Learning-By-Andrew-Ng-—-09-2015-11-2015" class="headerlink" title="Meachine Learning (By Andrew Ng) — 09 2015-11 2015"></a>Meachine Learning (By Andrew Ng) — 09 2015-11 2015</h2><p>I then took this course in the first semester of freshman.</p>
 <p>In this course, I got basic understanding about what meachine learning algorithms do.</p>
-<p>I studied several algorithms, including <em>Liner Regression, Logestic Regression, Feed Forward Neural Network, SVM, PCA, K-means, Collaborative filtering etc.</em></p>
-<p>After this course, I can use MATLAB to running simple meachine learning algorithms. That lay foundation for my further study using <em>MVPA</em> and <em>Encoding Models</em>.</p>
+<p>I realized several algorithms using MATLAB, including <em>Liner Regression, Logestic Regression, Feed Forward Neural Network, SVM, PCA, K-means, Collaborative filtering etc.</em></p>
+<p>After this course, I acquired the ability to running simple meachine learning algorithms using MATLAB. That lay a foundation for my further study about <em>MVPA</em>, <em>Encoding Models</em> and <em>Behavioral Modeling</em>.</p>
 <p>Certification</p>
 <p><img src="https://i.imgur.com/utR32bg.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
-<h2 id="Principles-of-fMRI-1-—-09-2015-11-2015"><a href="#Principles-of-fMRI-1-—-09-2015-11-2015" class="headerlink" title="Principles of fMRI 1 — 09 2015-11 2015"></a>Principles of fMRI 1 — 09 2015-11 2015</h2><p>In spring 2016 semester, I participated in this course for gaining basic understanding of fMRI.</p>
-<p>In this course, I studied some basic knowledge of fMRI and fMRI data analyze. Mainly about several points: 1)fMRI Data Structure, 2)Basic MR Physics and imaging, 3)Signal, Noise, and <em>BOLD</em> Physiology,4)fMRI Experiment Design,5)Pre-Processing of fMRI Data,6)GLM univariate analyze and <em>t</em>-contrast</p>
-<p>Also, We tried to make a note od this course for Chinese learner. It’s now open access in <a href="https://zhuanlan.zhihu.com/p/22002650" target="_blank" rel="external">Zhihu</a>, has gathered for about 200 up-votes.</p>
-<h2 id="Neural-Networks-for-Machine-Learning-—-10-2016-02-2017"><a href="#Neural-Networks-for-Machine-Learning-—-10-2016-02-2017" class="headerlink" title="Neural Networks for Machine Learning — 10 2016-02 2017"></a>Neural Networks for Machine Learning — 10 2016-02 2017</h2><p>In fall 2016 semester, I participated in this course for gaining more understanding about meachine learning, particularly about (deep) neural networks.</p>
-<p>I learnt about Perceptron, Feed Forward Neural Networ, RBM, Deep Belief Nets, and auto encoders etc. Most importently, I known how to trainning a deep neural network using unsuperviced learning with pre-trainning processing. I also realized that the learning rule of RBM and DBN also share some same point with LTDP in neural system. This course provide me with not only skills and knowledge about neual network ,also inspire me to do futher thinking about meachine learning and neuroscience.</p>
+<h2 id="Principles-of-fMRI-1-—-09-2015-11-2015"><a href="#Principles-of-fMRI-1-—-09-2015-11-2015" class="headerlink" title="Principles of fMRI 1 — 09 2015-11 2015"></a>Principles of fMRI 1 — 09 2015-11 2015</h2><p>In spring semester in 2016 , I took this course for gaining some basic understanding about fMRI.</p>
+<p>In this course, I studied some basic knowledge about fMRI and fMRI data analyze. Mainly about several points: 1)fMRI Data Structure, 2)Basic MR Physics and imaging, 3)Signal, Noise, and <em>BOLD</em> Physiology,4)fMRI Experiment Design,5)Pre-Processing of fMRI Data,6)GLM univariate analyze and <em>t</em>-contrast</p>
+<p>Also, I together with several other friends who is also interested in this field made a Chinese version note of this class for learns in China not good at English. We posted it in <a href="https://zhuanlan.zhihu.com/p/22002650" target="_blank" rel="external">Zhihu</a>. Our article has gathered about 260 up-votes and have influenced a lot of people.</p>
+<h2 id="Neural-Networks-for-Machine-Learning-—-10-2016-02-2017"><a href="#Neural-Networks-for-Machine-Learning-—-10-2016-02-2017" class="headerlink" title="Neural Networks for Machine Learning — 10 2016-02 2017"></a>Neural Networks for Machine Learning — 10 2016-02 2017</h2><p>In fall semester in 2016, I took this course for gaining more understanding about meachine learning, particularly about (deep) neural networks.</p>
+<p>I learnt about Perceptron, Feed Forward Neural Networ, RBM, Deep Belief Nets, and auto encoders etc. Most importently, I got to know about how to train a deep neural network using unsuperviced learning with pre-trainning processing. I also realized that the learning rules of RBM and DBN share some same point with LTDP in our neural system. This course provide me with not only skills and knowledge about neual network ,also inspire me to do some futher thinking about the relationship between meachine learning and neuroscience.</p>
 <p>Certification</p>
 <p><img src="https://i.imgur.com/TwQ6Olt.jpg" alt="MEACHINE_LEARNING_coursera_LIJINGJIE"></p>
 ]]></content>
@@ -286,30 +286,30 @@
     <entry>
       <title><![CDATA[A summer in PKU, A summer in Fang's lab]]></title>
       <url>http://www.jingjie.site/2016/08/22/A_summer_in_PKU/</url>
-      <content type="html"><![CDATA[<p>In the summer vocation, 2016. I spent a whole summer in Peking University. Attending the neuroscience summer school. After the summer school, I emailed Prof Fang Fang to require a chance to study more. He gave me a positive repley, I then stayed in prof. Fang Fang’s lab as a research intern for 5 weeks.</p>
-<p>6 Weeks in PKU is very meaninful. The lectures in the summer school expand my horizeon greatly. 5 weeks in Fang’s lab tought my how a graduate student in cognitive neuroscience reasoning and working.</p>
+      <content type="html"><![CDATA[<p>In the summer vocation in 2016 (After my freshman year in the university). I spent a whole summer in the Peking University(PKU). I attended the neuroscience summer school in the first week. After that, I emailed Prof Fang Fang for a chance to study more. I then stayed in prof. Fang Fang’s lab as a summer research intern for the up-coming 5 weeks.</p>
+<p>6 Weeks in PKU was very meaninful. The lectures in the summer school expand my horizeon greatly. 5 weeks in Fang’s lab tought my a lot about how a graduate student in cognitive neuroscience reasons and works.</p>
 <a id="more"></a>
-<p>In Fang’s lab. I learnt these three skills below.</p>
-<h1 id="Running-my-own-psychophysical-experiments"><a href="#Running-my-own-psychophysical-experiments" class="headerlink" title="Running my own psychophysical experiments"></a>Running my own psychophysical experiments</h1><p>In Fang’s lab. I learnt to programing with PTB(Psychtoolbox) using MATLAB. I carried out a pre-experiment to see how a prior unambigious SFM(Structure from motion) effects the up-coming bistable SFM.</p>
+<p>In Fang’s lab. I mainly did these stuff below.</p>
+<h1 id="Running-my-own-psychophysical-experiments"><a href="#Running-my-own-psychophysical-experiments" class="headerlink" title="Running my own psychophysical experiments"></a>Running my own psychophysical experiments</h1><p>I learnt about programing using PTB(Psychtoolbox) in MATLAB. I carried out a preliminary experiment to study how a prior unambigious Structure-from-motion(SFM) effects the up-coming bistable SFM.</p>
 <p><div align="center"><img src="https://i.imgur.com/mIKMgsk.jpg" alt="..." width="..."></div></p>
 <center>Figure 1. Carrying my own psychophysics experiments</center> 
 
-<p>The psychophysical protocol show below.</p>
+<p>The psychophysical protocol is here.</p>
 <p><div align="center"><img src="https://i.imgur.com/XaOpJqw.jpg" alt="601" width="408"></div></p>
-<center>Figure 2. The psychophysical protocol of my pre-experiment</center> 
+<center>Figure 2. The psychophysical protocol of my experiment</center> 
 
-<p>Then I fitted a psychophysical curve to actually ‘see’ this influence.</p>
-<h1 id="Dealing-with-fMRI-raw-data"><a href="#Dealing-with-fMRI-raw-data" class="headerlink" title="Dealing with fMRI raw data"></a>Dealing with fMRI raw data</h1><p>They gave me a fMRI data set used for trainning. Using that, I studied how to use SPM to manipulate these data. Including Preprocessing(Slice-timing correction, Motion Correction, Co-registration, Spacial Normalization, and Spatial Smoothing.), and uni-variation GLM analyze. Figure showed below.</p>
+<p>Then I fitted a psychophysical curve to quantify this influence.</p>
+<h1 id="Dealing-with-fMRI-raw-data"><a href="#Dealing-with-fMRI-raw-data" class="headerlink" title="Dealing with fMRI raw data"></a>Dealing with fMRI raw data</h1><p>I studied how to use SPM12 to process and manipulate fMRI data using a fMRI data set used for trainning that a graduate gave me. By going though a lot of tutorials and documents, I realized a lot of data-processing procesures such like Slice-timing correction, Motion Correction, Co-registration, Spacial Normalization, Spatial Smoothing and uni-variation GLM analyze. Figure shown below.</p>
 <p><div align="center"><img src="https://i.imgur.com/8PhuH0K.jpg" alt="..." width="..."></div></p>
-<center>Figure 3. Manipulate fMRI raw data using SPM 12</center> 
+<center>Figure 3. Processing fMRI raw data using SPM 12</center> 
 
-<p>Also, using SPM plug-in tools like XjView and MarsBar, I carried out an ROI analyze. I ploted the BSC in MT+, showed below.</p>
+<p>Moreover, I carried out an ROI analyze using SPM plug-in tools such like XjView and MarsBar. I ploted a BSC(Bold Signal Change) in MT+ result, shown below.</p>
 <p><div align="center"><img src="https://i.imgur.com/qge00mC.jpg" alt="..." width="..."></div></p>
 <center>Figure 4. Bold signal change percentage in MT+ </center> 
 
 
-<h1 id="Reasoning-and-thinking-like-a-graduate-student"><a href="#Reasoning-and-thinking-like-a-graduate-student" class="headerlink" title="Reasoning and thinking like a graduate student"></a>Reasoning and thinking like a graduate student</h1><p>Spent 5 weeks in Fang’s lab benifit me a lot. I got familiar with the graduate students in fang’s lab, understood what they do and how they think, reading more research articles based on their recommendation, and discussing about my own experiment. </p>
-<p>The experience in there promote me to think, to try and to act more. It refresh my plan about what to do in the future. Without this experience, I cannot carry my own research project in the past semester. Thank you professor fang fang, and all lab members in fang’s lab.</p>
+<h1 id="Reasoning-and-thinking-like-a-graduate-student"><a href="#Reasoning-and-thinking-like-a-graduate-student" class="headerlink" title="Reasoning and thinking like a graduate student"></a>Reasoning and thinking like a graduate student</h1><p>Spend 5 weeks in Dr. Fang’s lab benifited me a lot. I got familiar with the graduate students in fang’s lab, understood what they did and how they thought, read more research articles based on their suggestions, and tried to carry my own experiments. </p>
+<p>The experience I had there stimulated me to think, to try and to act. It refreshed my plan about what to do in the future. Without this experience, I cannot carry my own research project in the following semester. Thank you professor fang fang, and all lab members in Dr. fang’s lab.</p>
 ]]></content>
     </entry>
     
