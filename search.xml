@@ -4,6 +4,90 @@
   
     
     <entry>
+      <title><![CDATA[Design a ECG PPG measurement system]]></title>
+      <url>http://www.jingjie.site/2018/09/08/Design-a-ECG-PPG-measurement-system/</url>
+      <content type="html"><![CDATA[<p>As a BME student, I definately need to get a deep understanding toward the measurement of ECG and SPO2. In this project, I made a ECG SPO2 measurement system using TI(Texas Instruments)’s LDO chips, analog-front ICs, MSP430 MCU and Bluetooth module. I learnt a lot about how to drawing complex PCBs, how to use complex ICs, how to manage electric power, and practiced on doing MCU programming. Other 2 people in our group was working on the smartphone APP and MCU programming.</p>
+<p>We do these stuff is for a National BME(Biomedical Engineering) Competition for College Students in ShenZhen, China.</p>
+<p>On Aug 28, 2018: We won the FIRST PRIZE in National BME(Biomedical Engineering) Competition for College Students in ShenZhen, China. Which is the HIGHEST AWARD. </p>
+<a id="more"></a>
+<p>e’ve open sourced all our design files, code, APP design and some debuging tools. The Github link is <a href="https://github.com/celelion/ECGMonitor" target="_blank" rel="external">here</a>.</p>
+<h1 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h1><p>This is a ECG/SPO2 Monitor Project. We mainly used TI’s (Texas Instrument) <a href="http://www.ti.com/product/ads1293" target="_blank" rel="external">ADS1293</a>/<a href="http://www.ti.com/product/AFE4400/description" target="_blank" rel="external">AFE4400</a> analog front-end IC to acquire physiology data form human body, and used TI’s <a href="http://www.ti.com/product/MSP430F149/description" target="_blank" rel="external">MSP430F149 MCU</a> to control these Chips, and send the data to our Android Smartphone App via TI’s Bluetooth IC <a href="http://www.ti.com/product/CC2540/description" target="_blank" rel="external">CC2540</a>. In our smartphone App, we can display ECG/PPG wavefore, compute &amp; display SPO2,Heart Rate, and Heart Rate Variability(HRV), and control the hardware to running on different acquision mode (such as 3-Leads or 5-Leads mode).</p>
+<p>To do so, we disigned and made a custome PCB using Autodesk EAGLE, did embedded system programing for MSP430 using IAR IDE, and some stuff about smartphone APP. We also had a 3D printed case for our circuit.</p>
+<p>The major advantages of our system, is our outstanding power consumption performance. Our hardware only took about 300mW Power for Li-ion battery (about ~180mW for bluetooth). Also, our PCB is super portable, size less than 10-by-10cm.</p>
+<p>We Shared the majority of our code and design files. Including MSP430 program, PCB layout, 3D printing models, and some APP code.</p>
+<p>We do these stuff is for a <a href="http://bmedesign.medmeeting.org/cn" target="_blank" rel="external">National BME(Biomedical Engineering) Competition for College Students</a> in ShenZhen, China.</p>
+<p><strong>On Aug 28, 2018: We just won the FIRST PRIZE in <a href="http://bmedesign.medmeeting.org/cn" target="_blank" rel="external">National BME(Biomedical Engineering) Competition for College Students</a> in ShenZhen, China. Which is the HIGHEST AWARD.</strong></p>
+<p><img src="https://i.imgur.com/wQvYJVf.jpg" alt="Our Trophy and Certification"></p>
+<p><strong>Fig 1 Our First Prize Trophy and Certification</strong></p>
+<h1 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h1><h2 id="Characteristics-and-Technical-Indexes"><a href="#Characteristics-and-Technical-Indexes" class="headerlink" title="Characteristics and Technical Indexes"></a>Characteristics and Technical Indexes</h2><h3 id="ECG"><a href="#ECG" class="headerlink" title="ECG"></a>ECG</h3><ul>
+<li>Differential Input Voltage Range: -400 mV ~ +400 mV</li>
+<li>Common-Mode Rejection Ratio(CMRR): &gt;100 dB</li>
+<li>Differential Input Resistance: 500 MΩ</li>
+<li>Sampling Rate: 150 Hz</li>
+</ul>
+<h3 id="Oximeter"><a href="#Oximeter" class="headerlink" title="Oximeter"></a>Oximeter</h3><ul>
+<li>Sampling Rate: 50 Hz</li>
+</ul>
+<h3 id="Power-Consumption"><a href="#Power-Consumption" class="headerlink" title="Power Consumption"></a>Power Consumption</h3><table>
+<thead>
+<tr>
+<th>Overall Power</th>
+<th>Bluetooth</th>
+<th>ADS-ECG Module</th>
+<th>AFE-Oximeter Module</th>
+<th>MSP430-MCU Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>291.1103 mW</td>
+<td>177.7327 mW</td>
+<td>3.1984 mW</td>
+<td>93.0931 mW</td>
+<td>17.0861 mW</td>
+</tr>
+</tbody>
+</table>
+<h1 id="Hardware"><a href="#Hardware" class="headerlink" title="Hardware"></a>Hardware</h1><p><img src="https://i.imgur.com/rh3yaOw.jpg" alt="Hardware"></p>
+<p><strong>Fig 2 The PCB layout of ECG/SPO2 Monitor Hardware</strong></p>
+<p>We had a MainBoard, which contains mainly 5 modules, which is </p>
+<ul>
+<li>LDO Module for power supply; </li>
+<li>ADS Module for ECG; </li>
+<li>AFE Module for SPO2; </li>
+<li>MCU Module for controlling ;</li>
+<li>Debugging module, for downloading program(BSL), Serial-USB conversion for a convenient debuging on PC using Processing IDE.</li>
+</ul>
+<p><img src="https://i.imgur.com/xRYY25K.png" alt="Parts"></p>
+<p><strong>Fig 3 Different parts and modules on our Main PCB</strong></p>
+<h2 id="Power-Tree"><a href="#Power-Tree" class="headerlink" title="Power Tree"></a>Power Tree</h2><p>We used 4.8V Li-ion Battery or 5V USB to powering the whole system. 5V/4.8V is directly feed to USB chip CH340, and the Bluetooth Module. A TI LM1117 LDO chip proveide 3.3V power to ADS1293 ECG Module, and MSP430 MCU Module. </p>
+<p><img src="https://i.imgur.com/6MNTbJE.png" alt="PowerTree"></p>
+<p><strong>Fig 4 The Power Tree of our MainPCB</strong></p>
+<p>Powering AFE4400 is a little bit more complicated, to give AFE4400 IC a much more stable voltage supply, we used a Ultra-Low-Noise, High-PSRR <a href="http://www.ti.com/product/TPS7A49/description" target="_blank" rel="external">TI TPS7A49</a> chip to provide 3V power for the AFE4400’s digital supply (DIG SUP) pins. Then, we used a Low Noise ‘Ceramic Stable’ LDO <a href="http://www.ti.com/product/LP3878-ADJ/samplebuy" target="_blank" rel="external">TI LP3878</a> to provide 3.7v power for AFE4400 LED drive power supply pins (LED DRV). Using two chips, provided us a better isolation in AFE4400, which could minimize the voltage fluctuation interfere from ADS, MCU or AFE LED DRV parts.</p>
+<h2 id="Connectors"><a href="#Connectors" class="headerlink" title="Connectors"></a>Connectors</h2><p>For a common use, we choosed standard connectors and cables in our hardware design.</p>
+<p><img src="https://i.imgur.com/HNWKe9i.png" alt="Hardware connection"></p>
+<p><strong>Fig 5 Hardware Connectors</strong></p>
+<p>For example, for ECG, we used Mindray Standard 6-Pins, 5-Leads ECG cables and connectors; For SPO2, we used the standrad DB9 SPO2 Probe connector. So, it will be easy for our users to find new replcement when old probe is damaged.</p>
+<h2 id="Signal-Flow-in-our-PCB"><a href="#Signal-Flow-in-our-PCB" class="headerlink" title="Signal Flow in our PCB"></a>Signal Flow in our PCB</h2><p><img src="https://i.imgur.com/sKEyODt.png" alt="SignalFlow"></p>
+<p><strong>Fig 6 Signal Flow in our PCB</strong></p>
+<p>In our hardware, we used MSP430 MCU to drive the SPI Bus (as a master device) to configrate ECG and SPO2 Chips (Write data on specific address), and read digital data form each chip.</p>
+<p>The MSP430 MCU then compress, encode the sampled data to a long int, and send to the Bluetooth module (To smartphone APP) or a serial-USB debug module via UART.</p>
+<p>MSP430 MCU also controled several indicator LED, which we could visulize the sampling rhythm (By flashing of the ADS/AFE LED). LEDs can also provided alarms such as ECG Lead off, SPO2 Cable off for us.</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Build My Own REAL Bpod System]]></title>
+      <url>http://www.jingjie.site/2018/07/08/Build-my-own-REAL-Bpod-System/</url>
+      <content type="html"><![CDATA[<p>To train my own mouse and rats, I tried to build my own bpod system in my home university(XJTU), in Prof.Changhe’s lab. I build a real bpod system, based on Joshua Sander’s preliminary design (Bpod r-0.5). This stuff can actually be used for train the animals.</p>
+<a id="more"></a>
+<h1 id="About-BPOD-and-this-work"><a href="#About-BPOD-and-this-work" class="headerlink" title="About BPOD and this work"></a>About BPOD and this work</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
+<p>This project is my first trial to make a real functional B-Pod system, which I want to train my own animals. The introductions and overview of the B-Pod is covered in my previous post <a href="http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/">here</a>.</p>
+<h1 id="Building-the-hearware-part-of-B-Pod"><a href="#Building-the-hearware-part-of-B-Pod" class="headerlink" title="Building the hearware part of B-Pod"></a>Building the hearware part of B-Pod</h1><p>wait to be filled…</p>
+<h2 id="Building-the-rodent-behvioural-ports-amp-port-breakout-PCB"><a href="#Building-the-rodent-behvioural-ports-amp-port-breakout-PCB" class="headerlink" title="Building the rodent behvioural ports &amp; port breakout PCB"></a>Building the rodent behvioural ports &amp; port breakout PCB</h2><h2 id="Building-the-B-Pod-arduino-shield-PCB"><a href="#Building-the-B-Pod-arduino-shield-PCB" class="headerlink" title="Building the B-Pod arduino shield PCB"></a>Building the B-Pod arduino shield PCB</h2><h2 id="Building-the-behavioural-box"><a href="#Building-the-behavioural-box" class="headerlink" title="Building the behavioural box"></a>Building the behavioural box</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[My own B-Pod System using FPGA and MATLAB]]></title>
       <url>http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/</url>
       <content type="html"><![CDATA[<p>Working with rodents in Jeffrey Erlich’s lab last summer, I found that rodent decision-making is so amazing. So, In the electronic design class in this semester, I tried to make a B-Pod system using FPGA and MATLAB by my own. However, I successful bulit up a trainning system, and tested on the real rodents. So I can use that to carry out my own rodent experiment in the future.</p>
@@ -106,12 +190,12 @@
     <entry>
       <title><![CDATA[SURP in NYU Shanghai]]></title>
       <url>http://www.jingjie.site/2017/11/04/SURP%20in%20NYU%20Shanghai/</url>
-      <content type="html"><![CDATA[<p>In the summer, I joined the SURP (Summer Undergraduate Research Program). Ran a 10-week research experience in NYU-ECNU institute for brain and cognitive sciences at NYU(New York University) Shanghai.</p>
+      <content type="html"><![CDATA[<p>In this summer, I joined the SURP (Summer Undergraduate Research Program) – a 10-weeks research experience in NYU-ECNU institute for brain and cognitive sciences at NYU(New York University) Shanghai.</p>
 <a id="more"></a>
-<p>NYU’s News about me and the SURP:<br><a href="https://research.shanghai.nyu.edu/centers-and-institutes/brain/news/nurturing-science-careers-nyu-shanghai%E2%80%99s-incubator-future" target="_blank" rel="external">Nurturing Science Careers: NYU Shanghai’s Incubator for Future Neuroscientists</a></p>
-<p>Because my previous research in Visual Working memory, I was paired up with Dr. Jeffrey Erlich, Assistant Professor of Neural and Cognitive Sciences at NYU Shanghai for their shared interest in working memory.</p>
-<p>In this summer, I mainly focused on my own visual-working memory project. I stuided visual working memory(VWM) based decision making in the rodent.</p>
-<p>I quickly learned to program the state-of-the-art B-Pod behavioral training system developed by the lab, and I designed a 9-stage experiment protocol to train mice to perform a visual working-memory task.</p>
+<p>NYU’s News about me and that SURP:<br><a href="https://research.shanghai.nyu.edu/centers-and-institutes/brain/news/nurturing-science-careers-nyu-shanghai%E2%80%99s-incubator-future" target="_blank" rel="external">Nurturing Science Careers: NYU Shanghai’s Incubator for Future Neuroscientists</a></p>
+<p>Based on my previous research in Visual Working memory, I joined Dr. Jeffrey Erlich’s lab for we shared interest in working memory.</p>
+<p>In this summer, I mainly focused on my own visual-working memory project. I stuided visual working memory(VWM) based decision-making in the rodent.</p>
+<p>I quickly learned to program the state-of-the-art B-Pod behavioral training system developed by the lab, and I designed a 9-stages experiment protocol to train mice to perform a visual working memory task.</p>
 <p><img src="https://i.imgur.com/qC2SVRu.jpg" alt="Mouse was performing the visual working memory task"></p>
 <center>Mouse was performing the visual working memory task</center>
 
@@ -126,116 +210,7 @@
 <p><img src="https://i.imgur.com/CewLBMI.jpg" alt="with prof Erlich in the lab"></p>
 <center>With Dr. Jeffrey C. Erlich in the lab</center>
 
-<p>In this project. I read several articles first to reasoning the hypothesis and then developed a protocol to train animals. In this entire project, I learn much about how to exactly running experiments on rodent using BPOD system, and how to work collaboratively using Git. </p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Build My Own REAL Bpod System]]></title>
-      <url>http://www.jingjie.site/2017/07/08/Build-my-own-REAL-Bpod-System/</url>
-      <content type="html"><![CDATA[<p>I’m a totally rodent behaviour guy now! To train my own mouse and rats, I tried to build my own bpod system in my home university(XJTU), in Prof.Changhe’s lab. I build a real bpod system, based on Joshua Sander’s preliminary design (Bpod r-0.5). This stuff can actually used for train the animals. I’m going to train my own rats and mouse for my own multi-sensory perceptual decision making task.</p>
-<a id="more"></a>
-<h1 id="About-BPOD-and-this-work"><a href="#About-BPOD-and-this-work" class="headerlink" title="About BPOD and this work"></a>About BPOD and this work</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
-<p>This project is my first trial to make a real functional B-Pod, which I want to train my own animals. The introductions and overview of the B-Pod is covered in my previous post <a href="http://www.jingjie.site/2017/12/08/My-own-B-Pod-System-using-FPGA-and-MATLAB/">here</a>.</p>
-<h1 id="Building-the-hearware-part-of-B-Pod"><a href="#Building-the-hearware-part-of-B-Pod" class="headerlink" title="Building the hearware part of B-Pod"></a>Building the hearware part of B-Pod</h1><h2 id="Building-the-rodent-behvioural-ports-amp-port-breakout-PCB"><a href="#Building-the-rodent-behvioural-ports-amp-port-breakout-PCB" class="headerlink" title="Building the rodent behvioural ports &amp; port breakout PCB"></a>Building the rodent behvioural ports &amp; port breakout PCB</h2><h2 id="Building-the-B-Pod-arduino-shield-PCB"><a href="#Building-the-B-Pod-arduino-shield-PCB" class="headerlink" title="Building the B-Pod arduino shield PCB"></a>Building the B-Pod arduino shield PCB</h2><h2 id="Building-the-behavioural-box"><a href="#Building-the-behavioural-box" class="headerlink" title="Building the behavioural box"></a>Building the behavioural box</h2>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Design a ECG PPG measurement system]]></title>
-      <url>http://www.jingjie.site/2017/07/08/Design-a-ECG-PPG-measurement-system/</url>
-      <content type="html"><![CDATA[<p>As a BME student, how to build a ECG and SPO2(PPG) meachine is our core course. I definately need to do it well. In this project, I made a ECG SPO2 measurement system using TI(Texas Instruments)’s LDO chips, analog-front ICs, MSP430 MCU and Bluetooth module. I learnt a lot about how to drawing complex PCBs, how to use complex ICs, how to manage electric power, and practiced on doing MCU programming.</p>
-<a id="more"></a>
-<h1 id="About-this-project"><a href="#About-this-project" class="headerlink" title="About this project"></a>About this project</h1><p>The B-Pod system is developed by <a href="https://sanworks.io/about/about" target="_blank" rel="external">Joshua Sanders</a> in his initial open research instruments (The BPOD r0.5) while completing his PhD in <a href="http://kepecslab.cshl.edu/" target="_blank" rel="external">Kepecs Lab</a> at <a href="http://www.cshl.edu/" target="_blank" rel="external">Cold Spring Harbor Laboratory</a>.</p>
-<h1 id="Why-BPOD"><a href="#Why-BPOD" class="headerlink" title="Why BPOD"></a>Why BPOD</h1><p>Traditional rodent behavior experiments such as water maze have many limitations.Althrough learning is involved in that task, however, we can not isolate the different level of cognitive process in that task, such as sensory processing, working memory retention or the formation of dicision making. The learning of such a traditional task is also simple. Also, we cannot study how the brain dealing with uncertainty in decision-making.</p>
-<p>To study different level of cognitive process in the rodent (Guo et al., 2014), the neural mechanism of learning the complex task (Liu et al., 2016), and to study how the brain dealing with stochastic (Tervo et al., 2014). We need a more powerful tools to generate sensory cue, and detect the animals’ behavior. That’s why we need the B-Pod system.</p>
-<h2 id="More-detailed-examples"><a href="#More-detailed-examples" class="headerlink" title="More detailed examples"></a>More detailed examples</h2><p>If we want to study the working memory(WM) and the WM related decision making process in the rodent, the major method is to design a delay resonse task for the rodent. Such as auditory based(Erlich et al., 2011),whisker based(Guo et al., 2014), or visual based delay response task(Goard et al., 2016).</p>
-<p>In such a traditional delay response task, each trial contains about 3 phases. In the first phase, we give the subject a sensory cue (Such as a sound beep in a specific frequency, or a visual stimulus of a given directions or colors). Then there will be a delay period(Phase 2), the subject need to retent the information they got, and then(in phase 3), based on such information, make a specific behavior output(Such as poke to a specific port, lick/no lick or lick left/right) to gain water reward.</p>
-<p><img src="https://i.imgur.com/nYmKGNr.png" alt="Traditional working memory task for the rodent"></p>
-<center><strong>Fig 1.</strong> Traditional working memory task for the rodent</center>
-
-<p>To study how the brain dealing with stochastic, we can give then uncertaint reward, and observe how the animals adjust their behaivour policy to maxinum the profit. And study the source to generate stochastic(ACC) and to dealing with uncertainty(OFC). (Tervo et al., 2014)</p>
-<p><img src="https://i.imgur.com/7qD00AG.png" alt="how the brain dealing with stochastic"></p>
-<center><strong>Fig 2.</strong> How the brain dealing with stochastic</center>
-
-<p>Based on that, we need more powerful tools to train the animals to perform a decision-making involved complex task. That’s why I designed and made that device. </p>
-<h1 id="Bacis-idea-of-the-BPOD-system"><a href="#Bacis-idea-of-the-BPOD-system" class="headerlink" title="Bacis idea of the BPOD system"></a>Bacis idea of the BPOD system</h1><p>The basic idea of the bpod is to interact with the rodent using light or sound cue, and give them reward when they perform well. So the core problem is to detect rodents’ activity.</p>
-<p><img src="https://i.imgur.com/TlnjD6K.png" alt="The animal poke in and block the IR"></p>
-<center><strong>Fig 3.</strong> We have several LEDs around the ports and the sound in the mouse box to ‘tell’ the animal ‘what to do’</center>
-
-
-<p>To do so, we are using an IR emitter paired with an IR collector for each port. So everytime when the animal ‘poke’ into the port. The light from IR emitter will be block, so we can detect voltage change from the IR collector.</p>
-<p><img src="https://i.imgur.com/5vgmCaZ.png" alt="The animal poke in and block the IR"></p>
-<center><strong>Fig 4.</strong> We are using IR to detect animals’ behavior</center>
-
-<h1 id="Using-FPGA-to-control-and-monitering-the-devices"><a href="#Using-FPGA-to-control-and-monitering-the-devices" class="headerlink" title="Using FPGA to control and monitering the devices."></a>Using FPGA to control and monitering the devices.</h1><p>In my project, I’m using a FPGA(Field-Programmable Gate Array) to control the LEDs and water valve in the three mouse ports. Meanwhile, The FPGA is also used for monitering the IR collector of the three ports.<br><img src="https://i.imgur.com/9pT9kNl.png" alt="B-Pod-FPGA-PC-connection"></p>
-<center><strong>Fig 5.</strong> The connection diagram of the firmware</center>
-
-<p>The FPGA is connected to the MAC computer via a serial-USB convert line. And the MATLAB is able to talk with the FPGA via this serial port.</p>
-<p>Once the IR system detect the mouse’s activity, the IR collector will sent signals to the FPGA. Then the FPGA will send an 8-bits information contains that information. </p>
-<p>The FPGA keeps contraling the LEDs and water valve. When the MATLAB want to change a state(For example, turn on/off the light, open the water). It will sent a 8-bits information via serial port to re-write the state vector in FPGA. FPGA then change the target voltage in it’s ports.</p>
-<p>Because the voltage of the IR system is 5V and the voltage of the FPGA is 3.3v, I passed the IR output to a voltage convertor and a 74HC14 to reverse the voltage. The it will be sent to the FPGA, 3.3v means a ‘block’ is there, and 0v means this port is clear.</p>
-<p><img src="https://i.imgur.com/MFZnpOP.png" alt="FPGA-connection"></p>
-<center><strong>Fig 6.</strong> The connection diagram of the FPGA</center>
-
-<p>Connected all these firmware things. The FPGA, the LEDs, the IR ports, the 74HC14 chips and the computer, It looks like this. But it works pretty well.</p>
-<p><img src="https://i.imgur.com/WiYHVMt.png" alt="The-connected-sys"></p>
-<center><strong>Fig 7.</strong> The testing firmware</center>
-
-<h1 id="Using-MATLAB-to-control-the-FPGA-using-FSM"><a href="#Using-MATLAB-to-control-the-FPGA-using-FSM" class="headerlink" title="Using MATLAB to control the FPGA using FSM"></a>Using MATLAB to control the FPGA using FSM</h1><p>In the computer, the MATLAB will generate a FSM(Finate State Meachine) based on the design of the experiment protocol to control the FPGA. The animals’ behavioul will trigger the stage switching.</p>
-<p>We define a class to describe the experiment protocol. The simplist version is called the ‘Operant’, in <a href="https://github.com/celelion/BPod_FPGA/tree/master/Protocols/Operant" target="_blank" rel="external">‘Protocols/Operant’</a> path. It contains several sub-functions.</p>
-<ul>
-<li>init Section: Initialze the protocol, creating Sounds etc.</li>
-<li>useSetting Section: do some basic settings to the session. and load some old settings from previous experiment.</li>
-<li>PreparNextTrial Section: set the paramenters of the next trial based on prob. or history performance.</li>
-<li>RunTrial Section: Generate the FSM and run the trial.</li>
-<li>TrialComplete Section: do dome basic computation and analyze to this trial’s data.</li>
-<li>saveTrial section: save this trials data to the table.</li>
-</ul>
-<p>The <a href="https://github.com/celelion/BPod_FPGA/blob/master/System_Files/Modules/dispatch.m" target="_blank" rel="external">dispatch.m</a> in the modules path will call different parts of that class again and again. It also have many try-catch sentences, so that it will isolate bugs within each section and not affect running of the experiment.</p>
-<p>Also, I designed a subject management system there. We we input the subject’s id when starting the experiment, the program will record the stage and the information. So everthing will go automatically.</p>
-<h1 id="Making-the-Rig-Box"><a href="#Making-the-Rig-Box" class="headerlink" title="Making the Rig Box"></a>Making the Rig Box</h1><p>The box was made by laser cutted Plexiglass. I drwan the sketch using AutoCAD.<br><img src="https://i.imgur.com/XNTjUvO.png" alt="The sketch of the Rig Box"></p>
-<center><strong>Fig 8.</strong> The sketch of the Rig Box</center>
-
-<p>And then we manufact the mouse poke port using 3D priting technique.<br><img src="https://i.imgur.com/CJQFxya.jpg" alt="the 3D model of the mouse port"></p>
-<center><strong>Fig 9.</strong> the 3D model of the mouse port</center>
-
-<p>The hole is reserved for the IR LEDs and for the water tubes.</p>
-<p>Here is the fianl results after assembling.<br><img src="https://i.imgur.com/RxjzSXa.jpg" alt="Fianl Rig box"></p>
-<center><strong>Fig 10.</strong> Assembled Rig box - front view</center>
-
-<p><img src="https://i.imgur.com/KKmoxAL.png" alt="Final Rig Box - Back view"></p>
-<center><strong>Fig 11.</strong> Assembled Rig box - back view</center>
-
-<p>Before each run, we should manully test the rig system by calling rig_test function.</p>
-<p>In the future, I will make up a PCB version of the poke-wall system. To get more stable performance.</p>
-<h1 id="The-Basic-Trainning-Protocol"><a href="#The-Basic-Trainning-Protocol" class="headerlink" title="The Basic Trainning Protocol"></a>The Basic Trainning Protocol</h1><p>My system contains a basic Protocol named ‘Operant’. It’s a very general protocol that can be used to train animals to associate lights or sounds with reward.</p>
-<p>To train the animals, we need to follow up a stage-to-stage procedure. The basic idea is shown below. In ‘Operant’, we have three stages.</p>
-<p><img src="https://i.imgur.com/fY8Rsvx.png" alt="Stage_1"></p>
-<center><strong>Fig 12.</strong> State diagram of the stage 1</center>
-
-<p>First stage: ‘reward_train’. We will give them unconditional reward, just let them learn to drink. When they learnt how to drink, we will jump to the stage 2.</p>
-<p><img src="https://i.imgur.com/PDTS8yn.png" alt="Stage_2"></p>
-<center><strong>Fig 13.</strong> State diagram of the stage 2</center><br>Secound stage: ‘single_poke’. In this stage, we will turn the light of a port randomly, and wait for the animal to poke into that port. If they do well, they will get water reward, otherwise, they will hear about a short violation sound and no reward. When they got &gt;75% performance in the past 30 trials, they will go to the stage 3.<br><br># Running on Real Rodent<br><img src="https://i.imgur.com/IGX2sn3.png?1" alt="Runninng test on real mouse"><br><center><strong>Fig 14.</strong> Runninng test on real mouse</center>
-
-<p>After complete the whole things, I luckily found some mouse to conduct some real test. To make sure that my devices can detect real mouse’s behaviour and delivery reward water.</p>
-<p><img src="https://i.imgur.com/6rKnVle.png" alt="the mouse can drink!"></p>
-<center><strong>Fig 15.</strong> The mouse is drinking on the BotC port after a successful trial</center>
-
-<p>When the mouse do poke during ITI peroid, they will recieve violation sound.</p>
-<p><img src="https://i.imgur.com/fXqlyuK.png" alt="poke during ITI"></p>
-<center><strong>Fig 16.</strong> The mouse went to TopL port during ITI</center>
-
-<p>The testing results reveal that our devices can robustly capture rodent’s poking behavior, give the cue and delivery reward water.</p>
-<h1 id="The-Next-Step"><a href="#The-Next-Step" class="headerlink" title="The Next Step"></a>The Next Step</h1><p>Currerently, I’ve completed the trainning system. I’ll try to train several mouse and rats shortly after.</p>
-<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
-<li>Tervo, D. G. R., Proskurin, M., Manakov, M., Kabra, M., Vollmer, A., Branson, K., &amp; Karpova, A. Y. (2014). Behavioral variability through stochastic choice and its gating by anterior cingulate cortex. Cell, 159(1), 21-32. doi:10.1016/j.cell.2014.08.037</li>
-<li>Erlich, J. C., Bialek, M., &amp; Brody, C. D. (2011). A cortical substrate for memory-guided orienting in the rat. Neuron, 72(2), 330-343. doi:10.1016/j.neuron.2011.07.010</li>
-<li>Liu, D., Gu, X., Zhu, J., Zhang, X., Han, Z., Yan, W., . . . Li, C. T. (2014). Medial prefrontal activity during delay period contributes to learning of a working memory task. Science, 346(6208), 458-463. doi:10.1126/science.1256573</li>
-<li>Guo, Zengcai V., Li, N., Huber, D., Ophir, E., Gutnisky, D., Ting, Jonathan T., . . . Svoboda, K. (2014). Flow of Cortical Activity Underlying a Tactile Decision in Mice. Neuron, 81(1), 179-194. doi:10.1016/j.neuron.2013.10.020</li>
-<li>Guo, Z. V., Inagaki, H. K., Daie, K., Druckmann, S., Gerfen, C. R., &amp; Svoboda, K. (2017). Maintenance of persistent activity in a frontal thalamocortical loop. Nature, 545(7653), 181-186. doi:10.1038/nature22324</li>
-<li>Hanks, T. D., Kopec, C. D., Brunton, B. W., Duan, C. A., Erlich, J. C., &amp; Brody, C. D. (2015). Distinct relationships of parietal and prefrontal cortices to evidence accumulation. Nature, 520(7546), 220-223. doi:10.1038/nature14066</li>
-<li>Goard, M. J., Pho, G. N., Woodson, J., &amp; Sur, M. (2016). Distinct roles of visual, parietal, and frontal motor cortices in memory-guided sensorimotor decisions. eLife, 5. doi:10.7554/eLife.13764</li>
-</ul>
+<p>In this project. I firstly read several articles to reasoning the hypothesis and then, I developed a protocol to train my animals. By going though this project, I learn a lot about how to running rodent behavior experiments using the BPOD system. I got a very deep understanding toward the system, including how it communicate with DB, how it generate FSM(Finate-State-Meachine) and the hardware part-how it interact and record animals’ behavior preciesly.</p>
 ]]></content>
     </entry>
     
@@ -316,8 +291,9 @@
     <entry>
       <title><![CDATA[Nature image identification and voxels activity modeling using fMRI encoding model]]></title>
       <url>http://www.jingjie.site/2016/06/14/nature-image-identification/</url>
-      <content type="html"><![CDATA[<p>In may,2016. I tried to repeat a pioneering research published on <em>NATURE</em> (Kay et al., 2008), using a data-driven <em>Voxel-Wise</em> Model (Naselaris et al., 2011), I successfully constructed a liner receptive field model for every voxels using the Gabor wavelet filter according to the encoding theory of the primary visual cortex (Hubel and Wiesel, 1968), without noise ceiling procedures I also got remarkable accuracy in the identification task (about 48.8%, meanwhile the chance level is about 0.8%).</p>
+      <content type="html"><![CDATA[<p>In may 2016. I tried to repeat a pioneering research published on <em>NATURE</em> (Kay et al., 2008) using a data-driven <em>Voxel-Wise</em> Model (Naselaris et al., 2011). I successfully constructed a liner receptive field model for every voxels using the Gabor wavelet filter according to the encoding theory of the primary visual cortex (Hubel and Wiesel, 1968). Without noise ceiling procedures, I also got remarkable accuracy in the identification task (about 48.8%, meanwhile the chance level is about 0.8%).</p>
 <p>My code is now open sccess on <a href="https://github.com/celelion/Voxels-activity-modeling-using-fMRI-data" target="_blank" rel="external">Github  -  Voxels-activity-modeling-using-fMRI-data</a>.<br><a id="more"></a></p>
+<h1 id="Important-Statement"><a href="#Important-Statement" class="headerlink" title="Important Statement"></a>Important Statement</h1><p><strong>I did this stuff in my freshman year in university. At that time both my coding technique and English writing skills are not so sufficient. So please not evaliated my programming skills and English level based on the content below.</strong> </p>
 <h1 id="About-the-OPEN-ACCESS-data"><a href="#About-the-OPEN-ACCESS-data" class="headerlink" title="About the OPEN ACCESS data"></a>About the OPEN ACCESS data</h1><p>The data comes from <a href="https://crcns.org/data-sets" target="_blank" rel="external">CRCNS - Collaborative Research in Computational </a>.</p>
 <p>Data set:</p>
 <blockquote>
@@ -326,60 +302,60 @@
 <h1 id="Stimulus"><a href="#Stimulus" class="headerlink" title="Stimulus"></a>Stimulus</h1><p><div align="center"><img src="https://i.imgur.com/4JJ2uIY.png" alt="100" width="100"></div></p>
 <center>Figure 1. A given example of the natural image stimulus</center>  
 
-<p>Subjects view 1870 images while recording their brain activities using fMRI. 1750 of these are for training, the remaining is the test set.</p>
-<p>After the pre-processing procedure. They used GLM to estimate response for every images. Then they choose about 25000 voxels from (V1, V2, V3, V3a, V3b, V4, LatOcc etc.).</p>
+<p>Subjects viewed 1870 natural images while recording their brain activities using fMRI. 1750 of these are for training, the remaining is the test set.</p>
+<p>After the pre-processing procedure. They used GLM to estimate response for every images. Then they choose about 25000 voxels from V1, V2, V3, V3a, V3b, V4 and LatOcc, etc.</p>
 <h1 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><div align="center"><img src="https://i.imgur.com/MrZWYKP.jpg" alt="..." width="..."></div></p>
 <center>Figure 2. The overview of the data processing procedures. Mainly in three parts, feature extractions, voxels selection, and main training stage.</center> 
 
-<p>In order to modeling voxels’ tunning dynamic. We use this three-stage method. Including feature extractions, voxels selection, and main training(modeling)stage. </p>
-<h2 id="Procedures-amp-Results"><a href="#Procedures-amp-Results" class="headerlink" title="Procedures &amp; Results"></a>Procedures &amp; Results</h2><h3 id="Extract-features"><a href="#Extract-features" class="headerlink" title="Extract features"></a>Extract features</h3><p>According the theory of the encoding mechanism of the early visual cortex (EVC). Neurons in EVC firing for some particular orientation and spatial frequency in a particular visual position, which we called the receptive field. In fMRI, the activity patterns in the human visual cortex can also reveal what stimulus orientation a person is viewing(Kamitani &amp; Tong, 2005).</p>
-<p>To pick up infomation of orientation and spatial frequency in a natural image. We using the garbor wavelet to project onto every images in different space location, orientation, and spatial frequency, which we called the Gabor wavelet pyramid.</p>
+<p>In order to model voxels’ tunning dynamic. We use this three-stage method. Including feature extractions, voxels selection, and main training(modeling) stages. </p>
+<h2 id="Procedures-amp-Results"><a href="#Procedures-amp-Results" class="headerlink" title="Procedures &amp; Results"></a>Procedures &amp; Results</h2><h3 id="Extract-features"><a href="#Extract-features" class="headerlink" title="Extract features"></a>Extract features</h3><p>According to the theory about the encoding mechanism of the early visual cortex (EVC). Neurons in EVC firing for some particular orientation and spatial frequency in a particular visual position, which we called the receptive field. In fMRI, the activity patterns in human visual cortex can also reveal what stimulus orientation a person is viewing(Kamitani &amp; Tong, 2005).</p>
+<p>To pick up infomation of orientation and spatial frequency in a natural image. We used the garbor wavelet to project onto every images in different spacial location, orientation, and spatial frequency, which we called the Gabor wavelet pyramid.</p>
 <p>As for the Gabor wavelet pyramid. Wavelets occur at five (or, in some cases, six) spatial frequencies. This panel depicts one wavelet at each of the first five spatial frequencies. At each spatial frequency f cycles per field-of-view (FOV), wavelets are positioned on an f × f grid, as indicated by the translucent lines.Orientation and phase. At each grid position, wavelets occur at eight orientations and two phases. This panel depicts a complete set of wavelets for a single grid position. Dashed lines indicate the bounds of the mask associated with each wavelet.(Kay et al., 2008) Showed below.</p>
 <p><div align="center"><img src="https://i.imgur.com/3fZu0O3.png" alt="..." width="..."></div></p>
 <center>Figure 3. Gabor wavelet pyramid design.</center> 
 
 <p>There are five different spatial frequency(1,2,4,8,16 FOV). For every single spatial frequency, it has (1,4,16,64,256) types of different position in the visual field. For every position, there are 2 orthogonal phase and 8 different angles(0:22.5:157.5).</p>
-<p>Together, there are 5456 different gabor wavelets in the Gabor wavelet pyramid. I used the <strong>gabor_fn.m</strong> function to produce a gabor wavelet for the given sf,angle,phase,posi. <a href="https://en.wikipedia.org/wiki/Gabor_filter" target="_blank" rel="external">from Wikipedia</a></p>
-<p>Then, I wrote a function <strong>gaborfit.m</strong> to produce a set of gabor wavelet image directlly. It produce a martix called gab(128x128x5456).Represent 5456 different gabor wavelet image(128x128).</p>
-<p>To compute the projection. I wrote compscript.m (section 1). To compute the projection of 5456 wavelets for 1750 images. The projections for each quadrature pair of wavelets are then squared, summed, and square-rooted, yielding a measure of contrast energy. The result will be in the martix called proj(1750x2728).</p>
-<p>To remove wavelets ouuside the field of the natural images(outside the circle). I wrote a function called <strong>gabdelete</strong> in gabdelete.m. The result will be in the martix called projdeleteedge(1750x2728).</p>
+<p>Together, there are 5456 different gabor wavelets in the Gabor wavelet pyramid. I used the <strong>gabor_fn.m</strong> function to generate a gabor wavelet for the given sf,angle,phase,posi. <a href="https://en.wikipedia.org/wiki/Gabor_filter" target="_blank" rel="external">from Wikipedia</a></p>
+<p>Then, I wrote a function <strong>gaborfit.m</strong> to generate a set of gabor wavelet image directly. It produce a martix called gab(128x128x5456). Generate 5456 different gabor wavelet image(128x128).</p>
+<p>To compute the projection. I wrote the compscript.m (section 1). To compute the projection of 5456 wavelets for 1750 images. The projections for each quadrature pair of wavelets are then squared, summed, and square-rooted, yielding a measure of contrast energy. The result will be in the martix called proj(1750x2728).</p>
+<p>To remove wavelets outside the field of the natural image (outside the circle). I wrote a function called <strong>gabdelete</strong> in gabdelete.m. The results were put into a martix called projdeleteedge(1750x2728).</p>
 <h3 id="Training-algorithm"><a href="#Training-algorithm" class="headerlink" title="Training algorithm"></a>Training algorithm</h3><p><div align="center"><img src="https://i.imgur.com/KRTuZKe.png" alt="..." width="..."></div></p>
 <center>Figure 4. Gabor wavelet pyramid model..</center> 
 
-<p>Here we use multi-variation liner regression to build up the model. Using the features  which we cauculated before using gabor wavelet pyramid model. </p>
-<p>We use the tronditional square-root error cost function, and using gradient descent with monument to optimize the cost function.</p>
+<p>Here we used multi-variation liner regression to build up the model. We used the features which we cauculated before using gabor wavelet pyramid model. </p>
+<p>We used the traditional square-root error cost function together with gradient descent with monument to optimize the cost function.</p>
 <p>$h=h- \varepsilon g$</p>
 <p>$g=\left[ \left[ X’(Xh-y) \right]+\alpha g  \right]$</p>
-<p>To prevent over-fitting, we used early stopping. A randomly selected 20% of the data-set were removed and kept as a stopping set. Iterations proceeded until the squared error on the stopping set nolonger decreased, or until the squared error on the training set no longer decreased. </p>
+<p>To prevent over-fitting, we used early stopping method. A randomly selected 20% of data-set were removed and kept as a stopping set. Iterations proceeded until the squared error on the stopping set nolonger decreased, or until the squared error on the training set no longer decreased. </p>
 <p>I wrote two function to running this regression. inittrain.m and linereg.m</p>
 <p>The <strong>initrain.m</strong> is used to pre-processing the dataset, devided it into training set and stopping set for early stopping, and remove NaN data points.</p>
 <p>The <strong>linereg.m</strong> is used for running the optimzation of the cost function.</p>
-<h3 id="Pre-training-stage"><a href="#Pre-training-stage" class="headerlink" title="Pre-training stage"></a>Pre-training stage</h3><p>Trainning that models for 25000 voxels is too time-consuming. In order to improve efficiency. We carry a pre-training stage.</p>
-<p>In order to accelerate the training speed, we tried to reduce dimensions firstly. We did not take orentation into consideration: we averged the 8 gabor wavelet projection for each position.</p>
-<p>Then we can use that new features to fit the model. Using the weight for every location we can reconstruct the population receptive field. </p>
+<h3 id="Pre-training-stage"><a href="#Pre-training-stage" class="headerlink" title="Pre-training stage"></a>Pre-training stage</h3><p>Trainning that model for 25000 voxels was time-consuming. In order to improve efficiency. We carried out a pre-training stage.</p>
+<p>In this stage, we tried to reduce dimension firstly. We did not take orentation into our computation: we averged the 8 gabor wavelet projection for each position.</p>
+<p>Then we used that new features to fit the model. Using the weight for every location, we can reconstruct a population receptive field. </p>
 <p>This method is pretty likely to build up a data driven pRF(population receptive field).</p>
 <p><div align="center"><img src="https://i.imgur.com/SKdFstr.png" alt="150" width="300"></div></p>
-<center><strong>Figure 5. A given example of the reconstructed pRF.</strong> Left img represent a well-fitted voxel, it’s receptive field is very consentrate and <strong>sparse</strong>. Image in right represent a traditional poorly fitted voxel, it’s receptive field is very confusion.</center> 
+<center><strong>Figure 5. A given example of the reconstructed pRF.</strong> Left img represent a well-fitted voxel, its’ receptive field wass very consentrate and <strong>sparse</strong>. Image in right represent a traditional poorly fitted voxel, its’ receptive field was very confusion.</center> 
 
 <p>I worte _gabor<em>field.m</em> to generate a field map using gaussian functions.<br>The <em>RFvis.m</em> is used for reconstructing a population receptive field map for a given voxels, using the weight computed in the pre-trainning stage and the gabor_field.m, sum it up to form a receptive field map.<br>We need to remove those poorly fitted voxels. We have two ways to select voxels. </p>
-<h4 id="1-Gaussian-Fitted"><a href="#1-Gaussian-Fitted" class="headerlink" title="1. Gaussian Fitted"></a>1. Gaussian Fitted</h4><p>We can using Gaussian function to fitted the reconstructed pRF. The Gaussian RMS width(field vaule in fig 5.) can represent the ‘goodness of fit’, but sometimes some poorly-fitted can also be selected because of some overfitting problem.</p>
+<h4 id="1-Gaussian-Fitted"><a href="#1-Gaussian-Fitted" class="headerlink" title="1. Gaussian Fitted"></a>1. Gaussian Fitted</h4><p>We can using Gaussian function to fit the reconstructed pRF. The Gaussian RMS width(field vaule in fig 5.) can represent the ‘goodness of fit’, but sometimes some poorly-fitted could also be selected because of some overfitting problem.</p>
 <h4 id="2-R-Squared-sorting"><a href="#2-R-Squared-sorting" class="headerlink" title="2. R-Squared sorting"></a>2. R-Squared sorting</h4><p>To quantify the ‘goodness of fit’. We can also using R-Squared vaule directly. We cauculate R2 of those 25000 voxels and make a sorting. And we can choose the top 500 voxels to do the futher analyze.</p>
 <p>After the R-Squared sorting procedure, the top-10 voxels showed below.</p>
-<p><div align="center"><img src="https://i.imgur.com/yHmJhCj.jpg" alt="..." width="..."></div><br> <center><strong>Figure 5. Top 10 well-fitted voxels.</strong> Figure shows the reconstructed pRF of top 10 well-fitted voxels, it’s all has a relatively ‘sparse’ receptive field</center> </p>
-<p>The anatomical distribution of those 500 voxels showed below.</p>
+<p><div align="center"><img src="https://i.imgur.com/yHmJhCj.jpg" alt="..." width="..."></div><br> <center><strong>Figure 5. Top 10 well-fitted voxels.</strong> Figure shows the reconstructed pRF of top 10 well-fitted voxels, all of these have a relatively ‘sparse’ and ‘concentrative’ receptive field</center> </p>
+<p>The anatomical distribution of those 500 voxels is shown below.</p>
 <p><div align="center"><img src="https://i.imgur.com/mEhVsN9.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The anatomical distribution of those 500 voxels.</strong></center> </p>
-<p>As we can see, a huge amount of voxels are from early visual cortex(V1,V2,V3).</p>
-<p>I wrote <em>causelectedh.m</em> to select 500 voxels, and further more, to run the main-trainning stage below.</p>
-<h3 id="Main-training-stage"><a href="#Main-training-stage" class="headerlink" title="Main-training stage"></a>Main-training stage</h3><p>Have choosen 500 well-fitted voxels. We fitted those voxels with full features(with 8 orientations).<br>I then use this model to predict 500 voxels activities based on 120 natural images in the test set(120 images).<br>Then, We compute R-Squared vaule between actually response value and the predicted vaule of those 500 voxels among those 120 images, using that to generate a 120x120 image.</p>
+<p>As we can see, a huge amount of voxels were from early visual cortex(V1,V2,V3).</p>
+<p>I wrote <em>causelectedh.m</em> to select best 500 voxels, and to run the main-trainning stage below.</p>
+<h3 id="Main-training-stage"><a href="#Main-training-stage" class="headerlink" title="Main-training stage"></a>Main-training stage</h3><p>Have choosen 500 well-fitted voxels. We fitted those good voxels with full features(with 8 orientations).<br>I then used this model to predict 500 voxels’ activity based on 120 natural images in the test set(120 images).<br>Then, We computed R-Squared vaule between actually response value and the predicted vaule of those 500 voxels among those 120 images, that generated a 120x120 image.</p>
 <p><div align="center"><img src="https://i.imgur.com/3P6Lpj9.jpg" alt="..." width="..."></div><br> <center><strong>Figure 6. The correlation map of the actually response value and the predicted vaule of those 500 voxels.</strong> The (i,j)position’s color represent the R-Squared vaule between actually response value of the number i th image and the predicted vaule of the j th image of those 500 voxels.</center> </p>
 <p>I wrote <em>corxcmp.m</em> to predict the activity using test set images, and generate this final result.</p>
 <p>In the identifation task. We re-match the target’s brain activities with the best correlated predicted brain activities. In my work, without noise ceiling procedures, the identifation performance is about 58.8%, meanwhile, the chance level is about 0.83%.  </p>
 <p>Using the optimized wights in the main-training stage. We could generate a tuning properties image. It could tell us which orinentation and spatial frequency contribute more to the activity of the voxels.</p>
-<p>As a given example, for the No.23198 voxel, we visualize the weight distribution of the 8 orintations and 5 spatial frequency (5x8).</p>
+<p>As a given example, for the No.23198 voxel, we visualized the weight distribution of the 8 orintations and 5 spatial frequency (5x8).</p>
 <p><div align="center"><img src="https://i.imgur.com/wIWDRhV.png" alt="200" width="360"></div><br> <center><strong>Figure 7. The weight distribution of the 8 orintation and 5 spatial frequency for the voxel 23198.</strong> .</center> </p>
-<p> Further more, we plot the tuning properties for the orintations separately.</p>
+<p>Furthermore, we ploted the tuning properties(based on spatial frequency and orientation) separately.</p>
 <p> <div align="center"><img src="https://i.imgur.com/aZaeQqE.png" alt="200" width="360"></div><br> <center><strong>Figure 8.The tuning properties for the orintations(L) and spatial frequency(R).</strong> .</center> </p>
-<p> We can observe that, this voxel prefer 45 degres, and relevantly prefer higher special frequency. Consist with the encoding theory of the early visual cortex.</p>
+<p>We observed that this voxel prefered 45 degree, and relevantly prefer higher special frequency. Which is consist with the encoding theory of the early visual cortex.</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>Gilbert, C. D., &amp; Wiesel, T. N. (1985). Intrinsic connectivity and receptive field properties in visual cortex. Vision research, 25(3), 365-374.</p>
 <p>Chen, N., P. Cai, T. Zhou, B. Thompson, and F. Fang. 2016. ‘Perceptual learning modifies the functional specializations of visual cortical areas’, Proc Natl Acad Sci U S A.</p>
 <p>Hubel, D. H., and T. N. Wiesel. 1968. ‘Receptive fields and functional architecture of monkey striate cortex’, Journal of Physiology, 195: 215-43.</p>
@@ -396,33 +372,33 @@
     <entry>
       <title><![CDATA[Visual Image Reconstruction using fMRI]]></title>
       <url>http://www.jingjie.site/2016/03/10/visual_image_reconstruction/</url>
-      <content type="html"><![CDATA[<p>Mind-reading is really amazing and exciting. Using modern fMRI(functional magnetic resonance imaging) technique. We can now decoding some infomation from participant’s brain activities. </p>
-<p>Based on that, I repeated some previous research in Badong Chen’s lab, such as decode fMRI signal from primary visual cortex (V1) and reconstruct pattern image from fMRI signal (Miyawaki et al., 2008). Meanwhile, I improved the accuracy of the reconstruction by about 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
+      <content type="html"><![CDATA[<p>Mind-reading is an exciting topic. Modern fMRI(functional magnetic resonance imaging) technique are making mind-reading coming true. Using fMRI combine with modern machine learning algrithoms(MVPA), we can now decode some infomation from people’s brain activities. </p>
+<p>I repeated some previous prominence research about that topic in Badong Chen’s lab, such like fMRI signal decoding from primary visual cortex (V1) and reconstructing pattern image from fMRI signal (Miyawaki et al., 2008). Moreover, I improved the accuracy of the reconstruction by ~ 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
 <a id="more"></a>
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Mind-reading is really amazing and exciting. Using modern fMRI(functional magnetic resonance imaging) technique. We can now decoding some infomation from participant’s brain activities. </p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Mind-reading is an exciting topic. Modern fMRI(functional magnetic resonance imaging) technique are making mind-reading coming true. Using fMRI combine with modern machine learning algrithoms(MVPA), we can now decode some infomation from people’s brain activities.  </p>
 <p><img src="https://i.imgur.com/T9CTEqS.jpg" alt="Visual_Img_Rec"></p>
-<p>Based on that, I repeated some previous research in Badong Chen’s lab, such as decode fMRI signal from primary visual cortex (V1) and reconstruct pattern image from fMRI signal (Miyawaki et al., 2008). Meanwhile, I improved the accuracy of the reconstruction by about 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
-<p><strong>This article is only a berif introduction of my work.</strong> <strong>You can contact me for the reconstruction result video demo,</strong> <strong>for the source code and for more detail.</strong> </p>
-<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>Subjects view 12x12 binary(Black or White) pixels images while recoding their brain activities using fMRI. 352 of which are in random. 80s are in regular (The pattern of them are like numbers, etc.), see figure below.</p>
+<p>I repeated some previous prominence research about that topic in Badong Chen’s lab, such like fMRI signal decoding from primary visual cortex (V1) and reconstructing pattern image from fMRI signal (Miyawaki et al., 2008). Moreover, I improved the accuracy of the reconstruction by ~ 4% (from about 80% to about 84%), using the improved MVPA method with SVM classifier (Norman et al., 2006).</p>
+<p><strong>This article is only a berif introduction of my work.</strong> <strong>You can contact me for the source code and more details.</strong> </p>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><p>Subjects viewed 432 12x12 binary(Black or White) pixels image while recording their brain activities in Visual Cortex using fMRI. 352 of these image were in random. 80 were in regular (The pattern of them are resemble like numbers, cross, etc.), see figure below.</p>
 <p><div align="center"><img src="https://i.imgur.com/lmh5H6E.png" alt="100" width="200"></div></p>
-<center><strong>Figure 1.</strong> Left binary image is in random, right is in regular</center> 
+<center><strong>Figure 1.</strong> Left, binary image is in random. Right, binary image is in regular</center> 
 
-<p>Then we use GLM procedures to modeling brain activity for every stimuli.</p>
-<p>Firstly, I use MVPA(Multi-Voxels pattern analyze) to build up a model for every pixel (1x1 scale).</p>
-<p>We then everaged the vaule of 2 neighbouring pixels vertically (2x1 scale) and horizentally (1x2 scale), and 4 neighbouring pixels (2x2 scale). Figure showed below.(Miyawaki et al., 2008)</p>
+<p>I then used GLM procedures to model brain activity for every stimulus.</p>
+<p>Firstly, I used MVPA(Multi-Voxels pattern analyze) to build a decoding model for every pixel (1x1 scale).</p>
+<p>We then averaged the vaule of 2 neighbouring pixels vertically (2x1 scale), horizentally (1x2 scale) and 4 neighbouring pixels (2x2 scale). Figure shown below.(Miyawaki et al., 2008)</p>
 <p><div align="center"><img src="https://i.imgur.com/SvIXgX0.png" alt="..." width="..."></div></p>
 <center><strong>Figure 2.</strong> Multi-scale local image bases for buliding MVPA model</center> 
 
-<p>In MVPA, I firstly choosed 3037 voxels from V1, then caculated Pearson’s r for each voxels. Then sort them using r vaule. We choose the 50 voxels from it(top 30 and last 20). Then we trainning a SVM classifier to build up the MVPA model using 352 random images as a trainning set. The code example showed below.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> [ SVMStruct,corvox ] = singlevoxtrai(trainingsetnum,posi,beta,stim)%This model train a SVM model to a given posi of the stim % trainingsetnum=1:176;% posi=[6,6];%% section a,trainnning one single voxal trainingset=beta(:,trainingsetnum);[~,selectvox,~] = voxcor(posi(1,1),posi(1,2),stim(:,:,...trainingsetnum),trainingset);%select the corresponding voxels of the stimTraining=beta(selectvox,trainingsetnum)<span class="string">'; Group=reshape(stim(posi(1,1),posi(1,2),:),size(stim,3),1); Group=Group(trainingsetnum,:);SVMStruct = svmtrain(Training,Group,'</span>kernel_function<span class="string">','</span>polynomial<span class="string">'); corvox=selectvox;end</span></div></pre></td></tr></table></figure>
-<p>Then we use the remaining 80 examples to test our model, using the MVPA models we trainned before, to compute the pixels’ vaule given brain activities.</p>
-<p>Repeat these procedures to every pixels in 4 scale. After combining 4 scale using liner regression for each pixels. Finally, we got a reconstructed image using subject’s brain activities. We compute deviation using reconstruced image and the actually image (square-root error). The example show below.</p>
+<p>In MVPA feature selection for each pixel model, I firstly choosed 3037 voxels from V1, then caculated Pearson’s r between the activity of voxels and stimulus value (0 or 1). Then sort these voxels based on r vaule cauculated. We choosed 50 voxels from it(top 30 and last 20). Then we trained a SVM classifier using 352 random images as a trainning set. Note that each pixel has its own model(classifier and voxel selected), we overall have 12x12 models. The code example shown below.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="params">[ SVMStruct,corvox ]</span> = <span class="title">singlevoxtrai</span><span class="params">(trainingsetnum,posi,beta,stim)</span></span><span class="comment">%This model train a SVM model to a given posi of the stim % trainingsetnum=1:176;</span><span class="comment">% posi=[6,6];</span><span class="comment">%% section a,trainnning one single voxal trainingset=beta(:,trainingsetnum);</span>[~,selectvox,~] = voxcor(posi(<span class="number">1</span>,<span class="number">1</span>),posi(<span class="number">1</span>,<span class="number">2</span>),stim(:,:,...trainingsetnum),trainingset);<span class="comment">%select the corresponding voxels of the stim</span>Training=<span class="built_in">beta</span>(selectvox,trainingsetnum)'; Group=<span class="built_in">reshape</span>(stim(posi(<span class="number">1</span>,<span class="number">1</span>),posi(<span class="number">1</span>,<span class="number">2</span>),:),<span class="built_in">size</span>(stim,<span class="number">3</span>),<span class="number">1</span>); Group=Group(trainingsetnum,:);SVMStruct = svmtrain(Training,Group,<span class="string">'kernel_function'</span>,<span class="string">'polynomial'</span>); corvox=selectvox;<span class="keyword">end</span></div></pre></td></tr></table></figure>
+<p>Then we used the remaining 80 example images to test our models using the MVPA models we trainned before, We computed the pixels’ vaule given brain activities by running the classifier.</p>
+<p>Repeat this procedure to every pixels in 4 scale. After combining 4 scale results using liner regression for each pixels. Finally, we got a reconstructed image based on subject’s brain activities. We compute deviation between the reconstruced image and the actual image (square-root error). Example shown below.</p>
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/RWt4TnVn6ho" frameborder="0" allowfullscreen></iframe></center><br><center><strong>Figure 3</strong>. The demo video of the reconstructed image</center> 
 
 
 
-<p><strong>This article is only a berif introduction of my work.</strong> <strong>You can contact me for the reconstruction result video demo,</strong> <strong>for the source code and for more detail.</strong> </p>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+
+<h1 id="Main-References"><a href="#Main-References" class="headerlink" title="Main References"></a>Main References</h1><ul>
 <li><p>Miyawaki, Yoichi, et al. “Visual image reconstruction from human brain activity using a combination of multiscale local image decoders..” Neuron60.5(2008):915-29.</p>
 </li>
 <li><p>Norman, K. A et al.,(2006). Beyond mind-reading: multi-voxel pattern analysis of fMRI data. Trends Cogn Sci, 10(9), 424-430. doi:10.1016/j.tics.2006.07.005</p>
